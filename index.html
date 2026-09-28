@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IconFit — Fitness &amp; Beyond | Madinaty · El-Rehab City · Hacienda Bay</title>
+<meta name="description" content="IconFit — gyms in Madinaty, El-Rehab City and Hacienda Bay, open daily 6 AM to midnight. Group classes, personal training, yoga, sauna and jacuzzi. Download the official IconFit member app. Every question answered on WhatsApp, free.">
+<link rel="canonical" href="https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IconFit">
+<meta property="og:url" content="https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_EG">
+<meta property="og:title" content="IconFit — Fitness &amp; Beyond">
+<meta property="og:description" content="Three branches in Egypt. Group classes, personal training, yoga, sauna and jacuzzi. Book in the app or ask us on WhatsApp — free.">
+<meta property="og:image" content="https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/assets/og-cover.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="IconFit gym — Madinaty, El-Rehab City and Hacienda Bay">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IconFit — Fitness &amp; Beyond">
+<meta name="twitter:description" content="Three branches in Egypt. Group classes, personal training, yoga, sauna and jacuzzi.">
+<meta name="twitter:image" content="https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/assets/og-cover.jpg">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="assets/app-icon.jpg">
+<link rel="apple-touch-icon" href="assets/app-icon.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  "@id": "https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/#gym",
+  "name": "IconFit",
+  "url": "https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/",
+  "logo": "https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/assets/app-icon.jpg",
+  "image": "https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/assets/og-cover.jpg",
+  "telephone": "+201274745161",
+  "description": "Gyms in Madinaty, El-Rehab City and Hacienda Bay, open daily 6 AM to midnight. Group classes, personal training, yoga, sauna and jacuzzi.",
+  "priceRange": "$$",
+  "currenciesAccepted": "EGP",
+  "sameAs": [
+    "https://www.instagram.com/iconfit.eg/",
+    "https://play.google.com/store/apps/details?id=com.redgits.iconfit",
+    "https://apps.apple.com/eg/app/iconfit-gym/id6695745482"
+  ],
+  "areaServed": [
+    { "@type": "Place", "name": "Madinaty, Egypt" },
+    { "@type": "Place", "name": "El-Rehab City, Egypt" },
+    { "@type": "Place", "name": "Hacienda Bay, Egypt" }
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "06:00",
+    "closes": "00:00"
+  }]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════
+   ICONFIT — DESIGN SYSTEM
+   Luxury black & white editorial. Sharp radius, hairline
+   borders, generous whitespace, restrained motion.
+   ══════════════════════════════════════════════════════════ */
+:root{
+  /* surfaces */
+  --paper:#FFFFFF;
+  --bone:#FAFAF9;
+  --sand:#F5F5F4;
+  --ink:#0A0A0A;
+  --black:#000000;
+  --onyx:#141414;
+  --graphite:#1E1E1E;
+  --slate:#2B2B2B;
+
+  /* text on light */
+  --t-hi:#0A0A0A;
+  --t-mid:#525252;
+--t-lo:#6B6B6B;
+--t-faint:#767676;
+
+  /* text on dark */
+  --d-hi:#FFFFFF;
+  --d-mid:#A3A3A3;
+  --d-lo:#8F8F8F;
+  --d-line:#262626;
+
+  /* lines */
+  --line:#E7E5E4;
+  --line-2:#D6D3D1;
+  --line-dark:#262626;
+
+  /* geometry — deliberately sharp */
+  --r:3px;
+  --r-lg:4px;
+  --max:1300px;
+  --gut:clamp(20px,5vw,56px);
+  --sect:clamp(72px,10vw,140px);
+
+  --sans:'Inter','Cairo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --disp:'Inter','Cairo',-apple-system,sans-serif;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --sh:0 1px 2px rgba(0,0,0,.04),0 8px 28px -12px rgba(0,0,0,.14);
+  --sh-lg:0 2px 4px rgba(0,0,0,.04),0 30px 70px -30px rgba(0,0,0,.28);
+}
+html[lang="ar"]{ --sans:'Cairo','Inter',sans-serif; --disp:'Cairo','Inter',sans-serif; --serif:'Cairo',sans-serif; }
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:88px}
+body{
+  font-family:var(--sans);background:var(--paper);color:var(--t-hi);
+  line-height:1.6;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;font-feature-settings:"kern","liga","cv11";
+}
+img,svg,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none}
+::selection{background:var(--ink);color:#fff}
+:focus-visible{outline:1.5px solid var(--ink);outline-offset:3px}
+html[dir="rtl"]:focus-visible{outline-color:#fff}
+
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+
+/* ── type scale ─────────────────────────────────────────── */
+h1,h2,h3,h4{font-family:var(--disp);font-weight:800;letter-spacing:-.035em;line-height:1.02;text-wrap:balance}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] h4{letter-spacing:-.01em;line-height:1.28}
+h1{font-size:clamp(40px,7.4vw,104px)}
+h2{font-size:clamp(30px,4.6vw,60px)}
+h3{font-size:clamp(18px,1.7vw,23px);line-height:1.2;letter-spacing:-.02em}
+p{text-wrap:pretty}
+.serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+html[lang="ar"] .serif{font-style:normal;font-weight:700}
+
+/* ── section shell ──────────────────────────────────────── */
+.sect{padding-block:var(--sect);position:relative}
+.sect--bone{background:var(--bone)}
+.sect--dark{background:var(--black);color:var(--d-hi)}
+.sect--dark .t-mid{color:var(--d-mid)}
+.hr{height:1px;background:var(--line);border:0}
+
+/* numbered editorial header */
+.shead{margin-bottom:clamp(40px,5vw,68px);max-width:820px}
+.shead-row{display:flex;align-items:center;gap:16px;padding-bottom:20px;margin-bottom:26px;border-bottom:1px solid var(--line)}
+.sect--dark .shead-row{border-color:var(--line-dark)}
+.snum{font-family:var(--disp);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--t-faint)}
+.sect--dark .snum{color:var(--d-lo)}
+.skick{font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--t-mid)}
+.sect--dark .skick{color:var(--d-mid)}
+.shead h2{margin-bottom:18px}
+.shead p{color:var(--t-mid);font-size:clamp(16px,1.4vw,19px);max-width:62ch;font-weight:400}
+.sect--dark .shead p{color:var(--d-mid)}
+
+/* ── buttons ────────────────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 26px;border-radius:var(--r);font-weight:600;font-size:14.5px;letter-spacing:-.01em;
+  border:1px solid var(--ink);background:var(--ink);color:#fff;position:relative;overflow:hidden;
+  transition:color .34s var(--ease),border-color .34s var(--ease),background .34s var(--ease),transform .2s var(--ease);
+  white-space:nowrap;line-height:1;
+}
+.btn svg{width:17px;height:17px;flex:0 0 auto;transition:transform .34s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;background:#fff;transform:translateY(101%);transition:transform .34s var(--ease);z-index:0}
+.btn>*{position:relative;z-index:1}
+.btn:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
+.btn:hover::before{transform:translateY(0)}
+.btn:hover svg{transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn--ghost::before{background:var(--ink)}
+.btn--ghost:hover{color:#fff;border-color:var(--ink)}
+.btn--light{background:#fff;color:var(--ink);border-color:#fff}
+.btn--light::before{background:#000}
+.btn--light:hover{color:#fff;border-color:#fff}
+.btn--outline-light{background:transparent;color:#fff;border-color:#3A3A3A}
+.btn--outline-light::before{background:#fff}
+.btn--outline-light:hover{color:#000;border-color:#fff}
+.btn--sm{padding:11px 18px;font-size:13.5px}
+.btn--full{width:100%}
+.btn .arw{transition:transform .34s var(--ease)}
+.btn:hover .arw{transform:translateX(4px)}
+html[dir="rtl"] .btn:hover .arw{transform:translateX(-4px)}
+
+/* text link with sliding underline */
+.tlink{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;position:relative;padding-bottom:3px}
+.tlink::after{content:"";position:absolute;inset-inline:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:start;transition:transform .36s var(--ease)}
+.tlink:hover::after{transform:scaleX(1)}
+.tlink .arw{transition:transform .3s var(--ease)}
+.tlink:hover .arw{transform:translateX(4px)}
+html[dir="rtl"] .tlink:hover .arw{transform:translateX(-4px)}
+.sect--dark .tlink:hover{color:#fff}
+
+/* ── header ─────────────────────────────────────────────── */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.86);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--line);transition:border-color .3s,background .3s}
+.hdr.nav-stuck{background:rgba(255,255,255,.95)}
+.nav{display:flex;align-items:center;gap:clamp(16px,2.5vw,40px);height:76px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:17px;letter-spacing:-.03em;flex:0 0 auto}
+.brand img{width:34px;height:34px;border-radius:var(--r);object-fit:cover;filter:grayscale(1) contrast(1.1)}
+.brand b{font-weight:900}
+.nlinks{display:flex;gap:clamp(14px,1.8vw,28px);margin-inline-start:auto;font-size:14px;font-weight:500;color:var(--t-mid)}
+.nlinks a{position:relative;padding:6px 0;transition:color .25s}
+.nlinks a::after{content:"";position:absolute;inset-inline:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:start;transition:transform .3s var(--ease)}
+.nlinks a:hover,.nlinks a.active{color:var(--t-hi)}
+.nlinks a:hover::after,.nlinks a.active::after{transform:scaleX(1)}
+.nact{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.lang{display:flex;align-items:center;border:1px solid var(--line-2);border-radius:var(--r);overflow:hidden}
+.lang button{padding:9px 12px;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--t-lo);transition:.22s;min-width:42px}
+.lang button+.lang button{border-inline-start:1px solid var(--line-2)}
+.lang button.on{background:var(--ink);color:#fff}
+.lang button:not(.on):hover{color:var(--t-hi);background:var(--sand)}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line-2);border-radius:var(--r);place-items:center}
+.burger span{display:block;width:16px;height:1.5px;background:var(--ink);position:relative;transition:.28s var(--ease)}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:var(--ink);transition:.28s var(--ease)}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+.burger.on span{background:transparent}
+.burger.on span::before{transform:translateY(5px) rotate(45deg)}
+.burger.on span::after{transform:translateY(-5px) rotate(-45deg)}
+@media(max-width:1080px){
+  .nlinks{display:none}
+  .burger{display:grid}
+  .nav-actions-cta{display:none}
+}
+
+/* mobile menu */
+.mmenu{position:fixed;inset:76px 0 0;z-index:99;background:#fff;padding:8px var(--gut) 40px;
+  display:flex;flex-direction:column;opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;overflow-y:auto}
+.mmenu.on{opacity:1;visibility:visible;transform:none}
+.mmenu a.mlink{padding:20px 0;border-bottom:1px solid var(--line);font-size:clamp(26px,7vw,38px);font-weight:800;letter-spacing:-.035em;display:flex;align-items:baseline;gap:14px;transition:opacity .2s}
+.mmenu a.mlink .n{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--t-faint)}
+.mmenu a.mlink:active{opacity:.5}
+.mmenu .btn{margin-top:32px}
+@media(max-width:1080px){.mmenu{display:flex}}
+@media(min-width:1081px){.mmenu{display:none}}
+
+/* ── hero ───────────────────────────────────────────────── */
+.hero{padding-block:clamp(56px,8vw,110px) clamp(48px,6vw,80px);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(32px,5vw,80px);align-items:end}
+@media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--t-mid);margin-bottom:clamp(24px,3vw,40px)}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--t-hi)}
+.hero h1{margin-bottom:26px}
+.hero h1 em{font-style:normal;display:block}
+.hero h1 .serif{color:var(--t-mid)}
+.hero-lede{font-size:clamp(16px,1.5vw,19px);color:var(--t-mid);max-width:50ch;margin-bottom:38px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:var(--t-lo);font-weight:500}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta svg{width:13px;height:13px;stroke-width:2.4}
+
+/* hero visual */
+.hfig{position:relative}
+.hfig-main{position:relative;overflow:hidden;background:var(--sand);border-radius:var(--r-lg);aspect-ratio:4/4.5}
+.hfig-main img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .8s var(--ease),transform 1.1s var(--ease)}
+.hfig-main:hover img{filter:grayscale(0) contrast(1);transform:scale(1.03)}
+.hfig-cap{position:absolute;inset-inline:0;bottom:0;z-index:2;display:flex;flex-wrap:wrap;gap:6px;padding:16px;
+  background:linear-gradient(to top,rgba(0,0,0,.72),transparent);color:#fff}
+.hfig-cap b{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.34);border-radius:var(--r);padding:5px 10px;backdrop-filter:blur(6px)}
+.hfig-side{position:absolute;inset-inline-end:-1px;top:-26px;z-index:3;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh);min-width:190px}
+.hfig-side .k{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--t-faint);display:block;margin-bottom:8px}
+.hfig-side .v{font-size:14.5px;font-weight:700;letter-spacing:-.01em;display:block;line-height:1.35}
+.hfig-side .d{font-size:12px;color:var(--t-lo);margin-top:6px;display:block}
+@media(max-width:560px){.hfig-side{position:static;margin-top:14px;box-shadow:none}}
+
+/* ── marquee ────────────────────────────────────────────── */
+.mq{background:var(--black);color:#fff;overflow:hidden;padding-block:19px;border-block:1px solid var(--black)}
+.mq-track{display:flex;width:max-content;animation:mqrun 42s linear infinite}
+.mq:hover .mq-track{animation-play-state:paused}
+.mq-grp{display:flex;align-items:center;gap:clamp(24px,3vw,48px);padding-inline:clamp(12px,1.5vw,24px);white-space:nowrap}
+.mq-grp span{font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.mq-grp i{width:5px;height:5px;background:#fff;border-radius:50%;opacity:.5;flex:0 0 auto;font-style:normal}
+@keyframes mqrun{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+html[dir="rtl"] .mq-track{animation-name:mqrun-rtl}
+@keyframes mqrun-rtl{from{transform:translateX(0)}to{transform:translateX(50%)}}
+
+/* ── stats ──────────────────────────────────────────────── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+@media(max-width:820px){.stats{grid-template-columns:1fr 1fr}}
+.stat{padding:clamp(26px,3.4vw,44px) clamp(14px,2vw,28px);border-inline-start:1px solid var(--line)}
+.stat:first-child{border-inline-start:0;padding-inline-start:0}
+@media(max-width:820px){.stat:nth-child(odd){border-inline-start:0}}
+.stat b{display:block;font-size:clamp(32px,4.4vw,54px);font-weight:800;letter-spacing:-.045em;line-height:1}
+.stat span{display:block;margin-top:10px;font-size:12.5px;color:var(--t-lo);font-weight:500;letter-spacing:.01em}
+
+/* ── amenities ──────────────────────────────────────────── */
+.am-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media(max-width:1080px){.am-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.am-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.am-grid{grid-template-columns:1fr}}
+.am{padding:clamp(24px,2.6vw,34px) clamp(14px,1.6vw,24px) clamp(30px,3vw,42px);border-inline-start:1px solid var(--line);transition:background .35s var(--ease)}
+.am:nth-child(4n+1){border-inline-start:0}
+@media(max-width:1080px){.am:nth-child(4n+1){border-inline-start:1px solid var(--line)}.am:nth-child(3n+1){border-inline-start:0}}
+@media(max-width:760px){.am:nth-child(3n+1){border-inline-start:1px solid var(--line)}.am:nth-child(2n+1){border-inline-start:0}}
+@media(max-width:480px){.am{border-inline-start:0!important}}
+.am-ico{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:var(--r);margin-bottom:22px;transition:.35s var(--ease)}
+.am-ico svg{width:18px;height:18px;stroke-width:1.6}
+.am:hover{background:var(--bone)}
+.am:hover .am-ico{background:var(--ink);border-color:var(--ink);color:#fff}
+.am h3{margin-bottom:9px}
+.am p{font-size:14.5px;color:var(--t-mid);line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(32px,4vw,48px);padding-top:clamp(28px,3.4vw,40px);border-top:1px solid var(--line)}
+.chip{font-size:12.5px;font-weight:500;color:var(--t-mid);border:1px solid var(--line);border-radius:999px;padding:7px 15px;transition:.28s var(--ease);background:var(--paper)}
+.chip:hover{border-color:var(--ink);color:var(--ink);background:var(--ink);color:#fff}
+
+/* ── gallery ────────────────────────────────────────────── */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1vw,14px)}
+@media(max-width:1000px){.gal{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){.gal{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.gal{grid-template-columns:1fr}}
+.gi{position:relative;overflow:hidden;border-radius:var(--r);background:var(--sand);border:1px solid var(--line);
+  padding:0;width:100%;cursor:zoom-in;display:block;transition:border-color .3s}
+.gi img{width:100%;aspect-ratio:3/2;object-fit:cover;filter:grayscale(1) contrast(1.06);transition:filter .7s var(--ease),transform .9s var(--ease)}
+.gi:hover{border-color:var(--ink)}
+.gi:hover img{filter:grayscale(0) contrast(1);transform:scale(1.05)}
+.gi .z{position:absolute;inset-block-end:9px;inset-inline-end:9px;z-index:2;width:30px;height:30px;display:grid;place-items:center;
+  background:rgba(255,255,255,.94);border-radius:var(--r);opacity:0;transform:scale(.8) translateY(4px);transition:.3s var(--ease)}
+.gi .z svg{width:14px;height:14px;stroke-width:1.7}
+.gi:hover .z{opacity:1;transform:none}
+.gi--brand{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;aspect-ratio:3/2;
+  background:var(--black);border-color:var(--black);cursor:default;padding:22px;text-align:center}
+.gi--brand:hover{transform:none}
+.gi--brand img{max-height:58%;width:auto;object-fit:contain;filter:grayscale(1) brightness(2.4) contrast(1.1);mix-blend-mode:screen}
+.gi--brand b{font-size:12.5px;font-weight:800;letter-spacing:.24em;color:#fff}
+.gi--brand b i{font-style:normal;opacity:.45}
+.gi--brand small{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#6E6E6E;font-weight:600}
+
+/* ── offers ─────────────────────────────────────────────── */
+.off-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+@media(max-width:1100px){.off-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.off-grid{grid-template-columns:1fr}}
+.of{padding:clamp(24px,2.6vw,34px);border-inline-start:1px solid var(--line);border-block-start:1px solid var(--line);
+  display:flex;flex-direction:column;gap:14px;transition:background .35s var(--ease),color .35s var(--ease);position:relative;background:var(--paper)}
+.of:nth-child(4n+1){border-inline-start:0}
+@media(max-width:1100px){.of:nth-child(4n+1){border-inline-start:1px solid var(--line)}.of:nth-child(2n+1){border-inline-start:0}}
+@media(max-width:600px){.of{border-inline-start:0!important}.of:first-child{border-block-start:0}}
+.of:hover{background:var(--bone)}
+.of-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.of-ico{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:var(--r);transition:.35s var(--ease)}
+.of-ico svg{width:17px;height:17px;stroke-width:1.6}
+.of-n{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--t-faint)}
+.of h3{font-size:19px}
+.of p{font-size:14.5px;color:var(--t-mid);flex:1}
+.of .tlink{margin-top:4px}
+.of--dark{background:var(--black);color:#fff}
+.of--dark p{color:#A3A3A3}
+.of--dark .of-ico{border-color:#3A3A3A;color:#fff}
+.of--dark .of-n{color:var(--d-lo)}
+.of--dark .tlink{color:#fff}
+.of--dark:hover{background:var(--onyx)}
+.of--dark:hover .of-ico{background:#fff;color:#000;border-color:#fff}
+
+/* ── app section (inverted) ─────────────────────────────── */
+.app-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);gap:clamp(36px,5vw,80px);align-items:center}
+@media(max-width:1040px){.app-grid{grid-template-columns:1fr;gap:44px}}
+.app-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.app-eyebrow img{width:52px;height:52px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.app-eyebrow b{font-size:16px;font-weight:800;letter-spacing:-.01em;display:block}
+.app-eyebrow small{font-size:12px;color:var(--d-lo);display:block;margin-top:2px}
+.app-title{color:#fff;margin-bottom:20px}
+.app-lede{color:var(--d-mid);font-size:clamp(15.5px,1.4vw,18px);max-width:52ch;margin-bottom:34px}
+.feat{display:grid;gap:0;border-top:1px solid var(--line-dark)}
+.feat li{padding:18px 0;border-bottom:1px solid var(--line-dark);display:flex;gap:16px;align-items:flex-start}
+.feat .fi{width:34px;height:34px;flex:0 0 auto;display:grid;place-items:center;border:1px solid #333;border-radius:var(--r)}
+.feat .fi svg{width:16px;height:16px;stroke-width:1.6;color:#fff}
+.feat b{display:block;font-size:15.5px;font-weight:600;color:#fff;letter-spacing:-.01em}
+.feat p{font-size:14px;color:var(--d-lo);margin-top:3px}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);border-radius:var(--r);overflow:hidden;margin-top:30px}
+.spec{background:var(--black);padding:14px 16px}
+.spec b{display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--d-lo);margin-bottom:5px}
+.spec span{font-size:14.5px;font-weight:600;color:#fff;letter-spacing:-.01em;display:block;unicode-bidi:plaintext}
+@media(max-width:520px){.specs{grid-template-columns:1fr 1fr}}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,18px);align-items:center}
+.phone{border:1px solid #2C2C2C;border-radius:22px;padding:9px;background:#000;box-shadow:0 20px 50px -20px rgba(0,0,0,.8)}
+.phone img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;filter:grayscale(1) contrast(1.05);transition:filter .7s var(--ease)}
+.phone:hover img{filter:grayscale(0) contrast(1)}
+.phone:nth-child(2){transform:translateY(-16px)}
+@media(max-width:520px){.phones{max-width:270px;margin-inline:auto}.phone:nth-child(2){transform:none}}
+.stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.badge{display:inline-flex;align-items:center;gap:11px;background:#fff;border:1px solid #fff;border-radius:var(--r);
+  padding:10px 18px;transition:.28s var(--ease);color:#000}
+.badge:hover{background:var(--black);color:#fff;transform:translateY(-2px)}
+.badge svg{width:21px;height:21px;flex:0 0 auto}
+.badge .lg{width:20px;height:24px}
+.badge small{display:block;font-size:9.5px;letter-spacing:.06em;opacity:.62;line-height:1.3;font-weight:500}
+.badge b{font-size:15px;line-height:1.2;display:block;letter-spacing:-.02em;font-weight:700}
+
+/* ── branches ───────────────────────────────────────────── */
+.br-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.4vw,20px)}
+@media(max-width:900px){.br-grid{grid-template-columns:1fr}}
+.br{border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,2.8vw,36px);display:flex;flex-direction:column;gap:12px;transition:.35s var(--ease);background:var(--paper)}
+.br:hover{border-color:var(--ink);transform:translateY(-4px);box-shadow:var(--sh)}
+.br-n{font-family:var(--serif);font-size:44px;line-height:1;color:#8F8F8F;transition:color .35s var(--ease)}
+html[lang="ar"] .br-n{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:.1em}
+.br:hover .br-n{color:var(--ink)}
+.br h3{font-size:clamp(22px,2.2vw,30px)}
+.br p{font-size:15px;color:var(--t-mid);flex:1}
+.br .tlink{margin-top:8px}
+.br-ico{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:var(--r);margin-bottom:6px;transition:.35s var(--ease)}
+.br-ico svg{width:17px;height:17px;stroke-width:1.6}
+.br:hover .br-ico{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* ── faq ────────────────────────────────────────────────── */
+.faq{border-top:1px solid var(--line);max-width:960px;margin-inline:auto}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;
+  padding:clamp(22px,2.6vw,32px) 0;font-size:clamp(17px,1.9vw,22px);font-weight:600;letter-spacing:-.02em;line-height:1.3;transition:color .25s}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--t-mid)}
+.smark{font-size:22px;font-weight:300;line-height:1;flex:0 0 auto;position:relative;width:20px;height:20px;margin-top:.15em}
+.smark::before,.smark::after{content:"";position:absolute;background:currentColor;transition:transform .34s var(--ease)}
+.smark::before{left:0;top:50%;width:100%;height:1px;transform:translateY(-50%)}
+.smark::after{left:50%;top:0;width:1px;height:100%;transform:translateX(-50%)}
+details[open] summary .smark::after{transform:translateX(-50%) scaleY(0)}
+.faq-a{padding-bottom:clamp(24px,2.8vw,34px);max-width:66ch}
+.faq-a p{color:var(--t-mid);font-size:16px}
+.faq-a .btn{margin-top:20px}
+
+/* ── cta band ───────────────────────────────────────────── */
+.cta-band{background:var(--black);color:#fff;padding-block:clamp(64px,9vw,130px);text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(60% 100% at 50% 0%,rgba(255,255,255,.07),transparent 70%)}
+.cta-inner{position:relative;max-width:840px;margin-inline:auto}
+.cta-band h2{color:#fff;margin-bottom:22px}
+.cta-band p{color:#A3A3A3;font-size:clamp(16px,1.4vw,18.5px);max-width:52ch;margin:0 auto 38px}
+.cta-acts{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cta-band .fine{margin-top:26px;font-size:13px;color:var(--d-lo)}
+
+/* ── footer ─────────────────────────────────────────────── */
+footer{background:var(--black);color:#fff;padding-block:clamp(52px,6vw,86px) 34px;border-top:1px solid var(--line-dark)}
+.f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(28px,4vw,56px);padding-bottom:clamp(40px,5vw,64px)}
+@media(max-width:860px){.f-top{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.f-top{grid-template-columns:1fr;gap:34px}}
+.f-brand img{width:44px;height:44px;border-radius:var(--r);object-fit:cover;margin-bottom:20px;filter:grayscale(1) brightness(2.2) contrast(1.1);mix-blend-mode:screen}
+.f-brand p{color:var(--d-lo);font-size:14px;max-width:34ch;margin-top:12px}
+.f-word{font-size:clamp(38px,7vw,86px);font-weight:900;letter-spacing:-.05em;line-height:.9;margin-bottom:22px}
+.f-word i{font-style:normal;color:#4A4A4A}
+.f-col h3{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--d-lo);margin-bottom:18px}
+.f-col a{display:block;padding:7px 0;color:#D4D4D4;font-size:14.5px;transition:color .22s}
+.f-col a:hover{color:#fff}
+.f-bot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;
+  padding-top:26px;border-top:1px solid var(--line-dark);font-size:12.5px;color:var(--d-lo)}
+
+/* ── floating whatsapp ──────────────────────────────────── */
+.fab{position:fixed;inset-inline-start:20px;bottom:20px;z-index:110;display:flex;align-items:center;gap:0;
+  background:var(--ink);color:#fff;border:1px solid var(--ink);border-radius:var(--r);height:52px;padding:0;overflow:hidden;
+  box-shadow:0 8px 30px -6px rgba(0,0,0,.4);transition:background .34s var(--ease),color .34s var(--ease),transform .24s var(--ease),box-shadow .3s}
+.fab-i{width:52px;height:52px;display:grid;place-items:center;flex:0 0 auto}
+.fab-i svg{width:23px;height:23px}
+.fab span{font-size:14px;font-weight:600;white-space:nowrap;padding:0 20px 0 0;opacity:0;transition:opacity .28s var(--ease)}
+html[dir="rtl"] .fab span{padding:0 0 0 20px}
+.fab:hover{background:#fff;color:var(--ink);transform:translateY(-3px);box-shadow:0 14px 40px -8px rgba(0,0,0,.5)}
+.fab:hover span{opacity:1}
+
+/* ── toast ──────────────────────────────────────────────── */
+.toast{position:fixed;bottom:88px;inset-inline:0;margin-inline:auto;width:max-content;max-width:min(92vw,560px);
+  background:var(--ink);color:#fff;padding:13px 22px;border-radius:var(--r);font-size:14px;font-weight:500;
+  opacity:0;pointer-events:none;transform:translateY(14px);transition:.32s var(--ease);z-index:120;text-align:center;line-height:1.45}
+.toast.on{opacity:1;transform:none}
+
+/* ── lightbox ───────────────────────────────────────────── */
+.lb{position:fixed;inset:0;z-index:130;background:rgba(0,0,0,.97);display:none;align-items:center;justify-content:center;padding:24px}
+.lb.on{display:flex;animation:lbIn .3s var(--ease)}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
+.lb img{max-width:min(1080px,90vw);max-height:86vh;object-fit:contain;border-radius:var(--r);
+  box-shadow:0 40px 90px rgba(0,0,0,.8);animation:lbPop .38s var(--ease)}
+@keyframes lbPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+.lb-b{position:absolute;width:48px;height:48px;display:grid;place-items:center;border:1px solid #333;background:#000;color:#fff;
+  border-radius:var(--r);transition:.26s var(--ease)}
+.lb-b:hover{background:#fff;color:#000;border-color:#fff}
+.lb-b svg{width:20px;height:20px}
+.lb-x{top:20px;inset-inline-end:20px}
+.lb-p{inset-inline-start:20px;top:50%;transform:translateY(-50%)}
+.lb-n{inset-inline-end:20px;top:50%;transform:translateY(-50%)}
+.lb-c{position:absolute;bottom:24px;inset-inline:0;text-align:center;font-size:12.5px;letter-spacing:.16em;color:#6E6E6E;font-weight:600}
+
+/* ── motion ─────────────────────────────────────────────── */
+.r{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.r.in{opacity:1;transform:none}
+.r[data-d="1"]{transition-delay:.07s}.r[data-d="2"]{transition-delay:.14s}
+.r[data-d="3"]{transition-delay:.21s}.r[data-d="4"]{transition-delay:.28s}
+.r[data-d="5"]{transition-delay:.35s}.r[data-d="6"]{transition-delay:.42s}
+.r[data-d="7"]{transition-delay:.49s}.r[data-d="8"]{transition-delay:.56s}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .r{opacity:1;transform:none}
+}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.2s}
+
+/* ══════════════════════════════════════════════════════════
+   ENERGY LAYER — vibrance + motion on top of the b/w system
+   ══════════════════════════════════════════════════════════ */
+:root{ --acc:#D9FF3C; --acc-deep:#A8CC00; --acc-ink:#0A0A0A }
+
+/* scroll progress */
+.prog{position:fixed;top:0;inset-inline:0;height:3px;z-index:130;background:var(--acc);
+  transform:scaleX(0);transform-origin:0 50%;pointer-events:none;will-change:transform}
+
+/* ── accent moments ──────────────────────────────────────── */
+.eyebrow{color:var(--t-hi)}
+.eyebrow::before{background:var(--acc);height:3px;animation:ruleIn .9s .3s var(--ease) both}
+@keyframes ruleIn{from{width:0}to{width:34px}}
+
+/* highlighter sweep behind the hero word */
+.hero h1 .serif{color:var(--ink);background:linear-gradient(180deg,transparent 55%,var(--acc) 55%);
+  background-size:0% 100%;background-repeat:no-repeat;padding-inline:.1em;margin-inline:-.1em;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:hlIn 1s .45s var(--ease) forwards}
+@keyframes hlIn{to{background-size:100% 100%}}
+
+.snum{display:inline-grid;place-items:center;min-width:34px;height:34px;padding:0 8px;border-radius:var(--r);
+  background:var(--acc);color:var(--acc-ink);font-weight:800;letter-spacing:0}
+.sect--dark .snum{color:var(--acc-ink)}
+.skick{color:var(--t-mid)}
+.sect--dark .skick{color:var(--acc)}
+
+.mq-grp i{background:var(--acc);opacity:1;width:6px;height:6px;border-radius:0;transform:rotate(45deg);
+  animation:diamond 2.4s var(--ease) infinite}
+@keyframes diamond{0%,100%{transform:rotate(45deg) scale(1);opacity:1}50%{transform:rotate(225deg) scale(.7);opacity:.55}}
+.mq-grp span{transition:color .3s}
+.mq-grp:hover span{color:var(--acc)}
+
+.stat b{position:relative;transition:transform .4s var(--ease)}
+.stat b::after{content:"";position:absolute;inset-inline:0;bottom:-9px;height:3px;background:var(--acc);
+  transform:scaleX(0);transform-origin:0 50%;transition:transform .5s var(--ease)}
+.stat:hover b{transform:translateY(-3px)}
+.stat:hover b::after{transform:scaleX(1)}
+html[dir="rtl"] .stat b::after{transform-origin:100% 50%}
+
+.tlink{transition:color .3s var(--ease)}
+.tlink::after{background:var(--acc)}
+.tlink:hover{color:var(--t-hi)}
+.sect--dark .tlink:hover,.of--dark .tlink:hover{color:var(--acc)}
+
+.am-ico,.of-ico,.br-ico,.feat .fi{transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease),transform .35s var(--ease)}
+.am:hover .am-ico,.of:hover .of-ico,.br:hover .br-ico{background:var(--acc);border-color:var(--acc);color:var(--acc-ink);transform:rotate(-6deg) scale(1.06)}
+.of--dark:hover .of-ico,.sect--dark .feat .fi:hover{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.of--dark .of-ico{border-color:#3A3A3A}
+
+.chip{transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease)}
+.chip:hover{background:var(--acc);border-color:var(--acc);color:var(--acc-ink);transform:translateY(-2px)}
+
+.am,.of,.br{transition:background .35s var(--ease),transform .35s var(--ease)}
+.am:hover,.of:hover,.br:hover{transform:translateY(-4px)}
+.of::after,.br::after{content:"";position:absolute;inset-inline:0;top:0;height:3px;background:var(--acc);
+  transform:scaleX(0);transform-origin:0 50%;transition:transform .45s var(--ease);z-index:2}
+.of:hover::after,.br:hover::after{transform:scaleX(1)}
+html[dir="rtl"] .of::after,html[dir="rtl"] .br::after{transform-origin:100% 50%}
+.br{position:relative}
+
+.gi{transition:transform .4s var(--ease),border-color .3s,box-shadow .4s var(--ease)}
+.gi:hover{transform:translateY(-5px);border-color:var(--acc);box-shadow:0 18px 40px -22px rgba(0,0,0,.5)}
+.gi .z{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+
+.f-col a{transition:color .25s,transform .25s var(--ease)}
+.f-col a:hover{color:var(--acc);transform:translateX(5px)}
+html[dir="rtl"] .f-col a:hover{transform:translateX(-5px)}
+.f-col h3{color:#fff}
+
+/* primary buttons: accent wipe + shine */
+.btn{border-color:var(--ink);transition:transform .3s var(--ease),color .3s var(--ease),border-color .3s}
+.btn::before{background:var(--acc)}
+.btn:hover{border-color:var(--acc)}
+.btn::after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;z-index:0;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:translateX(-160%) skewX(-16deg)}
+.btn:hover::after{transform:translateX(320%) skewX(-16deg);transition:transform .75s var(--ease)}
+.btn--ghost::before{background:var(--ink)}
+.btn--light::before{background:#000}
+.btn--outline-light::before{background:#fff}
+.btn--ghost:hover{color:#fff}
+
+.fab{animation:fabPulse 2.8s ease-in-out infinite}
+@keyframes fabPulse{
+  0%,100%{box-shadow:0 8px 30px -6px rgba(0,0,0,.4)}
+  50%{box-shadow:0 8px 30px -6px rgba(0,0,0,.4),0 0 0 7px rgba(217,255,60,.28)}
+}
+.fab:hover{animation:none}
+
+/* ── motion ──────────────────────────────────────────────── */
+@keyframes riseIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes figIn{from{opacity:0;transform:translateY(34px) scale(.97)}to{opacity:1;transform:none}}
+.hero .eyebrow{animation:riseIn .8s .05s var(--ease) both}
+.hero h1{animation:riseIn .95s .16s var(--ease) both}
+.hero-lede{animation:riseIn .85s .34s var(--ease) both}
+.hero-cta{animation:riseIn .85s .46s var(--ease) both}
+.hero-meta{animation:riseIn .85s .58s var(--ease) both}
+.hfig{animation:figIn 1.15s .22s var(--ease) both}
+
+.hfig-main img{animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.11)}}
+.hfig-main:hover img{filter:grayscale(0) contrast(1);animation-play-state:paused}
+
+.r{opacity:0;transform:translateY(26px) scale(.986);filter:blur(7px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease)}
+.r.in{opacity:1;transform:none;filter:blur(0)}
+/* hover lifts must out-rank .r.in — same specificity, so they come later */
+.r.in.am:hover,.r.in.of:hover,.r.in.br:hover{transform:translateY(-4px)}
+.r.in.gi:hover{transform:translateY(-5px)}
+.mq-track{animation-duration:26s}
+
+.f-word{color:#fff}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .f-word{background:linear-gradient(100deg,#fff 28%,var(--acc) 45%,#fff 62%);background-size:260% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
+  .f-word i{color:transparent}
+}
+@keyframes shine{from{background-position:180% 0}to{background-position:-80% 0}}
+
+@media(prefers-reduced-motion:reduce){
+  .prog{display:none}
+  .hfig-main img,.mq-track,.mq-grp i,.fab,.f-word,.hero .eyebrow,.hero h1,.hero-lede,
+  .hero-cta,.hero-meta,.hfig,.eyebrow::before,.hero h1 .serif{animation:none!important}
+  .hero h1 .serif{background-size:100% 100%}
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOTION II — refined, professional movement
+   ══════════════════════════════════════════════════════════ */
+
+/* ── brand intro ────────────────────────────────────────── */
+.intro{position:fixed;inset:0;z-index:200;background:var(--ink);display:grid;place-items:center;
+  pointer-events:none;animation:introOut .62s var(--ease) .95s both}
+@keyframes introOut{to{transform:translateY(-101%);visibility:hidden;pointer-events:none}}
+.intro-in{display:grid;justify-items:center;gap:16px;animation:introIn .6s var(--ease) both}
+@keyframes introIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.intro-in img{width:42px;height:42px;border-radius:var(--r);object-fit:cover;
+  filter:grayscale(1) brightness(2.2);animation:introPulse 1s var(--ease) infinite alternate}
+@keyframes introPulse{from{opacity:.5;transform:scale(.93)}to{opacity:1;transform:none}}
+.intro-in b{font-size:clamp(21px,3.2vw,32px);font-weight:900;letter-spacing:-.03em;color:#fff}
+.intro-in b i{font-style:normal;color:var(--acc)}
+.intro-bar{display:block;width:110px;height:2px;background:rgba(255,255,255,.18);overflow:hidden}
+.intro-bar i{display:block;height:100%;background:var(--acc);transform:scaleX(0);
+  transform-origin:0 50%;animation:introBar .9s var(--ease) .1s both}
+@keyframes introBar{to{transform:scaleX(1)}}
+
+/* ── editorial section-head reveal ──────────────────────── */
+.shead .shead-row{clip-path:inset(0 100% 0 0);transition:clip-path .95s var(--ease) .08s}
+.shead.in .shead-row{clip-path:inset(0 0 0 0)}
+html[dir="rtl"] .shead .shead-row{clip-path:inset(0 0 0 100%)}
+html[dir="rtl"] .shead.in .shead-row{clip-path:inset(0 0 0 0)}
+.shead h2{position:relative}
+.shead h2::after{content:"";position:absolute;inset-inline-start:0;bottom:-16px;width:54px;height:2px;
+  background:var(--acc);transform:scaleX(0);transform-origin:0 50%;
+  transition:transform .8s var(--ease) .38s}
+.shead.in h2::after{transform:scaleX(1)}
+html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
+
+/* ── faq answer ─────────────────────────────────────────── */
+.faq details[open] .faq-a{animation:faqIn .42s var(--ease) both}
+@keyframes faqIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* ── back to top ────────────────────────────────────────── */
+.totop{position:fixed;inset-inline-end:20px;bottom:20px;z-index:105;width:46px;height:46px;
+  display:grid;place-items:center;background:var(--ink);color:#fff;border:1px solid var(--ink);
+  border-radius:var(--r);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(14px);
+  transition:opacity .32s var(--ease),transform .32s var(--ease),visibility .32s,background .28s,color .28s}
+.totop.on{opacity:1;visibility:visible;transform:none}
+.totop:hover{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.totop svg{width:17px;height:17px;stroke-width:1.9;transition:transform .3s var(--ease)}
+.totop:hover svg{transform:translateY(-3px)}
+
+/* ── parallax hook ──────────────────────────────────────── */
+.hfig-main{will-change:transform}
+
+@media(max-width:900px){ .totop{display:none} }
+@media(prefers-reduced-motion:reduce){
+  .intro{display:none!important}
+  .shead .shead-row{clip-path:none;transition:none}
+  .shead h2::after{transition:none}
+  .faq details[open] .faq-a{animation:none}
+  .totop{transition:opacity .2s,visibility .2s}
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <img src="assets/logo.jpg" alt="" width="42" height="42">
+    <b>ICON<i>FIT</i></b>
+    <span class="intro-bar"><i></i></span>
+  </div>
+</div>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="hdr" id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="assets/logo.jpg" alt="IconFit">
+      <span>ICON<b>FIT</b></span>
+    </a>
+
+    <nav class="nlinks" id="nlinks" aria-label="Main">
+      <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+      <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      <a href="#offers" data-i18n="nav.offers">Offers</a>
+      <a href="#app" data-i18n="nav.app">The App</a>
+      <a href="#branches" data-i18n="nav.branches">Branches</a>
+    </nav>
+
+    <div class="nact">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="on">EN</button>
+        <button type="button" data-lang="ar">ع</button>
+      </div>
+      <a class="btn btn--sm nav-actions-cta" data-wa="nav" href="#">
+        <span data-i18n="btn.ask">Ask on WhatsApp</span>
+        <svg class="arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+
+  <div class="mmenu" id="mmenu">
+    <a class="mlink" href="#amenities"><span class="n">01</span><span data-i18n="nav.amenities">Amenities</span></a>
+    <a class="mlink" href="#gallery"><span class="n">02</span><span data-i18n="nav.gallery">Gallery</span></a>
+    <a class="mlink" href="#offers"><span class="n">03</span><span data-i18n="nav.offers">Offers</span></a>
+    <a class="mlink" href="#app"><span class="n">04</span><span data-i18n="nav.app">The App</span></a>
+    <a class="mlink" href="#branches"><span class="n">05</span><span data-i18n="nav.branches">Branches</span></a>
+    <a class="mlink" href="#faq"><span class="n">06</span><span data-i18n="nav.faq">FAQ</span></a>
+    <a class="btn btn--full" data-wa="nav" href="#">
+      <span data-i18n="btn.ask">Ask on WhatsApp</span>
+      <svg class="arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="r">
+        <span class="eyebrow" data-i18n="hero.eyebrow">Uniting efforts, multiplying successes</span>
+        <h1 data-i18n-html="hero.title">Train harder<br>at <span class="serif">IconFit</span></h1>
+        <p class="hero-lede" data-i18n="hero.lead">Three branches across Egypt, cutting-edge equipment, elite coaches, group classes and personal training. Book through the official member app — or just send us a WhatsApp message.</p>
+        <div class="hero-cta">
+          <a class="btn" data-wa="offer" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.78 9.78 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.03 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.46 3.5A11.77 11.77 0 0 0 12.05 0C5.52 0 .19 5.33.19 11.86c0 2.09.55 4.13 1.59 5.93L.09 24l6.35-1.66a11.85 11.85 0 0 0 5.6 1.42h.01c6.53 0 11.86-5.33 11.86-11.86 0-3.17-1.24-6.15-3.48-8.39z"/></svg>
+            <span data-i18n="btn.claim">Ask about membership</span>
+          </a>
+          <a class="btn btn--ghost" href="#app">
+            <span data-i18n="btn.app">Get the member app</span>
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg><b data-i18n="hero.a1">Free WhatsApp support</b></span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6 9 17l-5-5"/></svg><b data-i18n="hero.a2">No forms, no waiting</b></span>
+        </div>
+      </div>
+
+      <div class="hfig r" data-d="2">
+        <div class="hfig-side">
+          <span class="k" data-i18n="hero.card.k">Member app</span>
+          <span class="v">Iconfit Gym · v1.0.1</span>
+          <span class="d" data-i18n="hero.card.v">iOS &amp; Android</span>
+        </div>
+        <div class="hfig-main">
+          <img src="assets/gym-01.jpg" alt="IconFit gym floor" fetchpriority="high">
+          <div class="hfig-cap">
+            <b>Madinaty</b><b>El-Rehab City</b><b>Hacienda Bay</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MARQUEE ══════════ -->
+  <div class="mq" aria-hidden="true"><div class="mq-track" id="mqtrack"></div></div>
+
+  <!-- ══════════ STATS ══════════ -->
+  <div class="wrap">
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <!-- ══════════ 01 AMENITIES ══════════ -->
+  <section class="sect" id="amenities">
+    <div class="wrap">
+      <div class="shead r">
+        <div class="shead-row"><span class="snum">01</span><span class="skick" data-i18n="am.kick">Inside the club</span></div>
+        <h2 data-i18n="am.title">Everything a serious gym needs</h2>
+        <p data-i18n="am.lead">We brought Egypt's fitness industry to a whole new level — a new methodology, top-notch elite coaches and staff, and cutting-edge, top-of-the-line equipment.</p>
+      </div>
+      <div class="am-grid" id="am-grid"></div>
+      <div class="chips" id="am-chips"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ 02 GALLERY ══════════ -->
+  <section class="sect sect--bone" id="gallery">
+    <div class="wrap">
+      <div class="shead r">
+        <div class="shead-row"><span class="snum">02</span><span class="skick" data-i18n="gal.kick">Inside IconFit</span></div>
+        <h2 data-i18n="gal.title">See the club for yourself</h2>
+        <p data-i18n="gal.lead">Real photos from the floor. Tap any image to open it full screen.</p>
+      </div>
+      <div class="gal" id="gal-grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ 03 OFFERS ══════════ -->
+  <section class="sect" id="offers">
+    <div class="wrap">
+      <div class="shead r">
+        <div class="shead-row"><span class="snum">03</span><span class="skick" data-i18n="off.kick">Offers</span></div>
+        <h2 data-i18n="off.title">Pick an offer, ask on WhatsApp</h2>
+        <p data-i18n="off.lead">Every card opens WhatsApp with the offer already written in the message box. Tap, send, done — no call centre, no fees.</p>
+      </div>
+      <div class="off-grid" id="off-grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ 04 APP ══════════ -->
+  <section class="sect sect--dark" id="app">
+    <div class="wrap">
+      <div class="shead r">
+        <div class="shead-row"><span class="snum">04</span><span class="skick" data-i18n="app.kick">The official app</span></div>
+        <h2 data-i18n="app.title">Your whole membership, in your pocket</h2>
+        <p data-i18n="app.lead">This is the official member app for Iconfit Gym. A feature-rich mobile app designed to help you make the most of your membership.</p>
+      </div>
+
+      <div class="app-grid">
+        <div class="r">
+          <div class="app-eyebrow">
+            <img src="assets/app-icon.jpg" alt="" loading="lazy">
+            <div>
+              <b>Iconfit Gym</b>
+              <small>Health &amp; Fitness · <span data-i18n="app.free">Free</span></small>
+            </div>
+          </div>
+          <ul class="feat" id="feat-list"></ul>
+          <div class="specs" id="specs"></div>
+          <div class="stores">
+            <a class="badge" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.redgits.iconfit">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8 13.7 12 3.6 22.2c-.4-.2-.6-.7-.6-1.3V3.1c0-.6.2-1.1.6-1.3zM15.2 13.4l2.6 2.6-11 6.2 8.4-8.8zM21.2 10.6c.9.5.9 1.4 0 1.9l-2.4 1.3-2.9-3.2 2.9-3.2 2.4 1.2z"/></svg>
+              <span><small>GET IT ON</small><b>Google Play</b></span>
+            </a>
+            <a class="badge" target="_blank" rel="noopener" href="https://apps.apple.com/eg/app/iconfit-gym/id6695745482">
+              <svg class="lg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+              <span><small>Download on the</small><b>App Store</b></span>
+            </a>
+            <a class="btn btn--outline-light" data-wa="app-help" href="#">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.78 9.78 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.03 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.46 3.5A11.77 11.77 0 0 0 12.05 0C5.52 0 .19 5.33.19 11.86c0 2.09.55 4.13 1.59 5.93L.09 24l6.35-1.66a11.85 11.85 0 0 0 5.6 1.42h.01c6.53 0 11.86-5.33 11.86-11.86 0-3.17-1.24-6.15-3.48-8.39z"/></svg>
+              <span data-i18n="app.help">Help me install it</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="phones r" data-d="2">
+          <figure class="phone"><img src="assets/app-shot-1.jpg" alt="IconFit app — screen 1" loading="lazy"></figure>
+          <figure class="phone"><img src="assets/app-shot-2.jpg" alt="IconFit app — screen 2" loading="lazy"></figure>
+          <figure class="phone"><img src="assets/app-shot-3.jpg" alt="IconFit app — screen 3" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 05 BRANCHES ══════════ -->
+  <section class="sect" id="branches">
+    <div class="wrap">
+      <div class="shead r">
+        <div class="shead-row"><span class="snum">05</span><span class="skick" data-i18n="br.kick">Locations</span></div>
+        <h2 data-i18n="br.title">Three branches. One standard.</h2>
+        <p data-i18n="br.lead">Tell us which branch suits you and we'll reply on WhatsApp within minutes.</p>
+      </div>
+      <div class="br-grid" id="br-grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ 06 FAQ ══════════ -->
+  <section class="sect sect--bone" id="faq">
+    <div class="wrap">
+      <div class="shead r" style="max-width:720px">
+        <div class="shead-row"><span class="snum">06</span><span class="skick" data-i18n="faq.kick">FAQ</span></div>
+        <h2 data-i18n="faq.title">Questions, answered on WhatsApp</h2>
+        <p data-i18n="faq.lead">Can't find it here? Open the question and the message is already typed for you.</p>
+      </div>
+      <div class="faq r" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="cta-band">
+    <div class="wrap cta-inner r">
+      <h2 data-i18n="cta.title">Ready to start? One message is all it takes.</h2>
+      <p data-i18n="cta.lead">No forms, no sign-up, no service fees. Send a WhatsApp message and we'll get you booked.</p>
+      <div class="cta-acts">
+        <a class="btn btn--light" data-wa="start" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.78 9.78 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.03 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.46 3.5A11.77 11.77 0 0 0 12.05 0C5.52 0 .19 5.33.19 11.86c0 2.09.55 4.13 1.59 5.93L.09 24l6.35-1.66a11.85 11.85 0 0 0 5.6 1.42h.01c6.53 0 11.86-5.33 11.86-11.86 0-3.17-1.24-6.15-3.48-8.39z"/></svg>
+          <span data-i18n="cta.btn">Start on WhatsApp</span>
+        </a>
+        <a class="btn btn--outline-light" href="#branches"><span data-i18n="cta.branch">View all branches</span></a>
+      </div>
+      <p class="fine" data-i18n="cta.fine">100% free · No call charges · Replies within minutes</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <img src="assets/logo.jpg" alt="IconFit" loading="lazy">
+        <p data-i18n="foot.blurb">Three branches across Egypt, one standard of training. Download the member app or send us a message — it's free.</p>
+      </div>
+      <div class="f-col">
+        <h3 data-i18n="foot.explore">Explore</h3>
+        <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#offers" data-i18n="nav.offers">Offers</a>
+        <a href="#app" data-i18n="nav.app">The App</a>
+        <a href="#branches" data-i18n="nav.branches">Branches</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div class="f-col">
+        <h3 data-i18n="foot.connect">Connect</h3>
+        <a href="https://www.instagram.com/iconfit.eg/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://play.google.com/store/apps/details?id=com.redgits.iconfit" target="_blank" rel="noopener" data-i18n="foot.app">Android app</a>
+        <a href="https://apps.apple.com/eg/app/iconfit-gym/id6695745482" target="_blank" rel="noopener" data-i18n="foot.ios">iOS app</a>
+        <a href="#" data-wa="nav" data-i18n="foot.wa">WhatsApp</a>
+      </div>
+    </div>
+    <div class="f-word">ICON<i>FIT</i></div>
+    <div class="f-bot">
+      <span>© <span id="yr"></span> IconFit · Sales Moaz — <span data-i18n="foot.tag">Uniting efforts, multiplying successes</span></span>
+      <span data-i18n="foot.dev">App by Redgits Solutions</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════ FLOATING / OVERLAYS ══════════ -->
+<button class="fab" data-wa="fab" type="button" aria-label="WhatsApp">
+  <span class="fab-i"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.78 9.78 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.03 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.46 3.5A11.77 11.77 0 0 0 12.05 0C5.52 0 .19 5.33.19 11.86c0 2.09.55 4.13 1.59 5.93L.09 24l6.35-1.66a11.85 11.85 0 0 0 5.6 1.42h.01c6.53 0 11.86-5.33 11.86-11.86 0-3.17-1.24-6.15-3.48-8.39z"/></svg></span>
+  <span data-i18n="fab.text">Send a message</span>
+</button>
+
+<button class="totop" id="totop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="lb-b lb-x" id="lbX" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <button class="lb-b lb-p" id="lbP" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+  <button class="lb-b lb-n" id="lbN" type="button" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+  <img id="lbImg" alt="">
+  <div class="lb-c" id="lbC"></div>
+</div>
+
+<script>
+/* ═══════════ CONFIG — number + all copy live here ═══════════ */
+const WA_NUMBER = "201274745161";   /* 01274745161 in international format, no + */
+const BRAND = "IconFit";
+
+const I18N = {
+  en:{
+    "nav.amenities":"Amenities","nav.gallery":"Gallery","nav.offers":"Offers",
+    "nav.app":"The App","nav.branches":"Branches","nav.faq":"FAQ",
+    "btn.ask":"Ask on WhatsApp","btn.claim":"Ask about membership","btn.app":"Get the member app",
+    "hero.eyebrow":"Uniting efforts, multiplying successes",
+    "hero.title":'Train harder<br>at <span class="serif">IconFit</span>',
+    "hero.lead":"Three branches across Egypt, cutting-edge equipment, elite coaches, group classes and personal training. Book through the official member app — or just send us a WhatsApp message.",
+    "hero.a1":"Free WhatsApp support","hero.a2":"No forms, no waiting",
+    "hero.card.k":"Member app","hero.card.v":"iOS & Android",
+    "mq.1":"Madinaty","mq.2":"El-Rehab City","mq.3":"Hacienda Bay","mq.4":"Open 6 AM – midnight",
+    "mq.5":"Sauna & jacuzzi","mq.6":"Personal training","mq.7":"Group classes",
+    "mq.8":"Yoga & Pilates","mq.9":"Rehabilitation","mq.10":"App on iOS & Android",
+    "stats.1":"Branches in Egypt","stats.2":"Hours open daily","stats.3":"Google Play downloads","stats.4":"Data collected by the app",
+    "am.kick":"Inside the club","am.title":"Everything a serious gym needs",
+    "am.lead":"We brought Egypt's fitness industry to a whole new level — a new methodology, top-notch elite coaches and staff, and cutting-edge, top-of-the-line equipment.",
+    "gal.kick":"Inside IconFit","gal.title":"See the club for yourself",
+    "gal.lead":"Real photos from the floor. Tap any image to open it full screen.",
+    "gal.mark":"The mark",
+    "off.kick":"Offers","off.title":"Pick an offer, ask on WhatsApp",
+    "off.lead":"Every card opens WhatsApp with the offer already written in the message box. Tap, send, done — no call centre, no fees.",
+    "app.kick":"The official app","app.title":"Your whole membership, in your pocket",
+    "app.lead":"This is the official member app for Iconfit Gym. A feature-rich mobile app designed to help you make the most of your membership.",
+    "app.free":"Free","app.help":"Help me install it",
+    "spec.cat":"Category","spec.size":"Size","spec.ver":"Version","spec.ios":"Requires",
+    "spec.rating":"Rated","spec.privacy":"Privacy","spec.nocollect":"No data collected",
+    "br.kick":"Locations","br.title":"Three branches. One standard.",
+    "br.lead":"Tell us which branch suits you and we'll reply on WhatsApp within minutes.",
+    "faq.kick":"FAQ","faq.title":"Questions, answered on WhatsApp",
+    "faq.lead":"Can't find it here? Open the question and the message is already typed for you.",
+    "cta.title":"Ready to start? One message is all it takes.",
+    "cta.lead":"No forms, no sign-up, no service fees. Send a WhatsApp message and we'll get you booked.",
+    "cta.btn":"Start on WhatsApp","cta.branch":"View all branches",
+    "cta.fine":"100% free · No call charges · Replies within minutes",
+    "foot.blurb":"Three branches across Egypt, one standard of training. Download the member app or send us a message — it's free.",
+    "foot.explore":"Explore","foot.connect":"Connect",
+    "foot.app":"Android app","foot.ios":"iOS app","foot.wa":"WhatsApp",
+    "foot.tag":"Uniting efforts, multiplying successes","foot.dev":"App by Redgits Solutions",
+    "fab.text":"Send a message","toast":"Opening WhatsApp — write your question and we'll reply in minutes.",
+    "ask":"Ask about this"
+  },
+  ar:{
+    "nav.amenities":"الخدمات","nav.gallery":"الصور","nav.offers":"العروض",
+    "nav.app":"التطبيق","nav.branches":"الفروع","nav.faq":"أسئلة شائعة",
+    "btn.ask":"اسأل على واتساب","btn.claim":"اسأل عن الاشتراك","btn.app":"حمّل التطبيق",
+    "hero.eyebrow":"نجمع الجهد.. مضاعفة النجاح",
+    "hero.title":'اتدرب أقوى<br>في <span class="serif">IconFit</span>',
+    "hero.lead":"ثلاث فروع في مصر، أجهزة حديثة، كوتشيز معتمدين، كلاسز جروب، وتدريب شخصي. احجز من التطبيق الرسمي للأعضاء — أو ابعتلنا رسالة واتساب وخلاص.",
+    "hero.a1":"دعم واتساب مجاني","hero.a2":"من غير فورم ولا انتظار",
+    "hero.card.k":"تطبيق الأعضاء","hero.card.v":"أندرويد وآيفون",
+    "mq.1":"مدينتي","mq.2":"إل ريب","mq.3":"هاسيندا باي","mq.4":"مفتوح 6 صبح – 12 بالليل",
+    "mq.5":"سونا وجاكوزي","mq.6":"تدريب شخصي","mq.7":"كلاسز جروب",
+    "mq.8":"يوجا وبيلاتس","mq.9":"تأهيل","mq.10":"تطبيق على آيفون وأندرويد",
+    "stats.1":"فروع في مصر","stats.2":"ساعات تفتح يوميًا","stats.3":"تحميل من Google Play","stats.4":"بيانات بيجمعها التطبيق",
+    "am.kick":"من جوه النادي","am.title":"كل اللي الجيم محتاجه",
+    "am.lead":"نقلنا صناعة اللياقة في مصر لمستوى تاني — منهجية جديدة، كوتشيز ومدربين من الصف الأول، وأجهزة حديثة من أعلى الفئة.",
+    "gal.kick":"من جوه IconFit","gal.title":"شوف الجيم بنفسك",
+    "gal.lead":"صور حقيقية من الجيم. اضغط على أي صورة تشوفها بملء الشاشة.",
+    "gal.mark":"العلامة",
+    "off.kick":"العروض","off.title":"اختار العرض واسأل على واتساب",
+    "off.lead":"كل كارت بيفتح واتساب والرسالة مكتوبة سلفًا. تدوس، تبعت، خلاص — من غير مركز اتصال ومن غير أي رسوم.",
+    "app.kick":"التطبيق الرسمي","app.title":"اشتراكك كله في جيبك",
+    "app.lead":"ده التطبيق الرسمي لأعضاء Iconfit Gym، تطبيق مملوء بالمميزات مصمم عشان تستفيد لأقصى حد من اشتراكك.",
+    "app.free":"مجاني","app.help":"ساعدني أحمله",
+    "spec.cat":"التصنيف","spec.size":"الحجم","spec.ver":"الإصدار","spec.ios":"يتطلب",
+    "spec.rating":"التقييم","spec.privacy":"الخصوصية","spec.nocollect":"لا يجمع أي بيانات",
+    "br.kick":"الفروع","br.title":"ثلاث فروع.. نفس المستوى.",
+    "br.lead":"قولنا على الفرع اللي يريحك وهنرد عليك على واتساب في دقايق.",
+    "faq.kick":"أسئلة شائعة","faq.title":"أسئلتك إجابتها على واتساب",
+    "faq.lead":"مش لاقي الإجابة هنا؟ افتح السؤال والرسالة تكون مكتوبة لك جاهزة.",
+    "cta.title":"جاهز تبدأ؟ رسالة واحدة تكفي.",
+    "cta.lead":"من غير فورم ولا تسجيل ولا رسوم خدمة. ابعت رسالة واتساب وهنظبطلك الحجز.",
+    "cta.btn":"ابدأ على واتساب","cta.branch":"كل الفروع",
+    "cta.fine":"مجاني 100% · من غير رسوم اتصال · الرد في دقايق",
+    "foot.blurb":"ثلاث فروع في مصر، مستوى تدريب واحد. حمّل التطبيق أو ابعتلنا رسالة — مجاني.",
+    "foot.explore":"تصفح","foot.connect":"تواصل",
+    "foot.app":"تطبيق أندرويد","foot.ios":"تطبيق آيفون","foot.wa":"واتساب",
+    "foot.tag":"نجمع الجهد.. مضاعفة النجاح","foot.dev":"التطبيق من Redgits Solutions",
+    "fab.text":"ابعت رسالة","toast":"بنفتح واتساب — اكتب سؤالك وهنرد عليك في دقايق.",
+    "ask":"اسأل عن ده"
+  }
+};
+
+const ICONS = {
+  clock:`<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>`,
+  dumbbell:`<path d="M4 9v6M8 7v10M16 7v10M20 9v6M8 12h8"/>`,
+  users:`<path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>`,
+  waves:`<path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/>`,
+  shield:`<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>`,
+  heart:`<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/>`,
+  pin:`<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>`,
+  gift:`<path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/>`,
+  user:`<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>`,
+  group:`<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>`,
+  yoga:`<circle cx="12" cy="4.5" r="2"/><path d="M12 7v5m0 0-4 8m4-8 4 8M6 12h12"/>`,
+  search:`<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>`,
+  cal:`<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/>`,
+  news:`<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9h4"/><path d="M10 7h6M10 11h6"/>`,
+  id:`<rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.6-1.5 1.8-2 3-2s2.4.5 3 2M14 10h5M14 14h3"/>`,
+  arrow:`<path d="M5 12h14M13 6l6 6-6 6"/>`
+};
+
+const GYM_PHOTOS = [
+  "gym-01.jpg","gym-02.jpg","gym-03.jpg","gym-04.jpg","gym-05.jpg","gym-06.jpg",
+  "gym-07.jpg","gym-08.jpg","gym-09.jpg","gym-10.jpg","gym-11.jpg"
+];
+
+const STATS = [
+  ["3","stats.1"],["18","stats.2"],["100+","stats.3"],["0","stats.4"]
+];
+
+const AMENITIES = [
+  { icon:"clock", en:["Open 6 AM – midnight","Open seven days a week, so early workouts and late sessions both fit."],
+                 ar:["مفتوح 6 صبح – 12 بالليل","نفتح سبعة أيام في الأسبوع، فالتمرين الصبحي والمسائي كلهم موجودين."] },
+  { icon:"dumbbell", en:["Top-of-the-line equipment","Cutting-edge strength and cardio machines, maintained to a high standard."],
+                 ar:["أجهزة من أعلى فئة","أجهزة قوة وكارديو حديثة، وبتتالصيانة بانتظام."] },
+  { icon:"users", en:["Elite coaches & staff","Top-notch trainers specialised in physical sports, plus a support team that knows your name."],
+                 ar:["كوتشيز ومدربين من الصف الأول","مدربين متخصصين في الرياضة، وفريق بيعرفك باسمك."] },
+  { icon:"group", en:["Group training & classes","A weekly class schedule built for every level, from beginner to advanced."],
+                 ar:["تدريب جروب وكلاسز","جدول كلاسز أسبوعي يناسب كل المستويات."] },
+  { icon:"waves", en:["Yoga & Crossfit","Mobility and stretching sessions alongside conditioning work."],
+                 ar:["يوجا وكروسفيت","جلسات إطالة ومرونة مع تدريبات لياقة مشروطة."] },
+  { icon:"shield", en:["Rehab & weight loss","Rehabilitation for sports injuries and structured weight-loss programmes."],
+                  ar:["تأهيل وإنقاص وزن","تأهيل لإصابات الرياضة وبرامج إنقاص وزن متدرجة."] },
+  { icon:"heart", en:["Sauna & jacuzzi","A sauna and jacuzzi to help you reset after every session."],
+                 ar:["سونا وجاكوزي","سونا وجاكوزي يساعدوك تستعيد نشاطك بعد كل تمرين."] }
+];
+
+const CHIPS = {
+  en:["6 AM – 12 AM","Crossfit","Fitness classes","Group Training","Men","Women only","Mix","Sauna & Jacuzzi","Rehabilitation","Weight loss"],
+  ar:["6 صبح – 12 بالليل","كروسفيت","كلاسز لياقة","تدريب جروب","رجالي","بنات","مختلط","سونا وجاكوزي","تأهيل","إنقاص وزن"]
+};
+
+const OFFERS = [
+  { icon:"user", dark:true,
+    en:{ title:"Personal training", text:"One-to-one coaching and a plan built around your goal, with follow-up.",
+         msg:"Hello 👋 I'd like details and prices for personal training at IconFit." },
+    ar:{ title:"تدريب شخصي PT", text:"كوتش فردي وبرنامج مخصص على هدفك، مع متابعة مستمرة.",
+         msg:"السلام عليكم 👋 عايز تفاصيل وأسعار التدريب الشخصي في IconFit." } },
+  { icon:"group",
+    en:{ title:"Group classes", text:"A weekly timetable of group sessions that fits around your life.",
+         msg:"Hello 👋 Could you send me the group class schedule?" },
+    ar:{ title:"كلاسز جروب", text:"جدول كلاسز أسبوعي يناسب وقتك.",
+         msg:"السلام عليكم 👋 ممكن تبعتلي جدول الكلاسز الجروب؟" } },
+  { icon:"yoga",
+    en:{ title:"Yoga & Pilates", text:"Mobility, flexibility and recovery sessions for every level.",
+         msg:"Hello 👋 Tell me about the Yoga and Pilates classes." },
+    ar:{ title:"يوجا وبيلاتس", text:"جلسات مرونة واستشفاء لكل المستويات.",
+         msg:"السلام عليكم 👋 عايز تفاصيل كلاسز اليوجا والبيلاتس." } },
+  { icon:"waves",
+    en:{ title:"Rehab programme", text:"Rehabilitation for sports injuries, guided step by step.",
+         msg:"Hello 👋 I'd like information about the rehabilitation programme." },
+    ar:{ title:"برنامج التأهيل", text:"تأهيل لإصابات الرياضة خطوة بخطوة.",
+         msg:"السلام عليكم 👋 عايز معلومات عن برنامج التأهيل." } },
+  { icon:"heart",
+    en:{ title:"Sauna & jacuzzi", text:"Recovery sauna and jacuzzi — ask us about access on your plan.",
+         msg:"Hello 👋 Are the sauna and jacuzzi included in my membership?" },
+    ar:{ title:"سونا وجاكوزي", text:"سونا وجاكوزي للاستشفاء — اسأل عنهم ضمن باقتك.",
+         msg:"السلام عليكم 👋 السونا والجاكوزي متاحة ضمن اشتراكي؟" } }
+];
+
+const FEATURES = [
+  { icon:"search", en:["Search class schedules","Find any class and its time in seconds — no calling required."],
+                  ar:["ابحث في جداول الكلاسز","دور على أي كلاس وموعده في ثواني — من غير ما تتصل."] },
+  { icon:"news",   en:["Latest club news","See announcements, new programmes and branch updates as they land."],
+                  ar:["آخر أخبار النادي","اعرف الإعلانات والبرامج الجديدة وتحديثات الفروع أول بأول."] },
+  { icon:"cal",    en:["Build your fitness schedule","Create a personal routine and keep track of what you actually train."],
+                  ar:["اعمل جدولك الشخصي","نظّم روتينك الشخصي وتابع اللي بتتمرنه فعلاً."] },
+  { icon:"id",     en:["Your member account","Subscription details and account information in one tap."],
+                  ar:["حساب العضوية","تفاصيل اشتراكك ومعلومات حسابك بضغطة واحدة."] }
+];
+
+const BRANCHES = [
+  { name:"Madinaty", arName:"مدينتي",
+    en:["Our flagship branch in the heart of the city — the latest equipment and specialist coaches."],
+    ar:["فرعنا الأساسي في قلب المدينة — أحدث الأجهزة وكوتشيز متخصصين."] },
+  { name:"El-Rehab City", arName:"إل ريب",
+    en:["Same equipment, same coaching standard, on the other side of the city."],
+    ar:["نفس الأجهزة ونفس مستوى التدريب، في ناحية تانية من المدينة."] },
+  { name:"Hacienda Bay", arName:"هاسيندا باي",
+    en:["Group classes and a functional training area on the North Coast."],
+    ar:["كلاسز جروب ومساحة تدريب وظيفي في الساحل الشمالي."] }
+];
+
+const FAQ = [
+  { q:["How much is a membership and what offers do you have?","الاشتراك بكام وإيه العروض المتاحة؟"],
+    a:["Prices and packages differ per branch and plan. Message us and we'll send you everything in one go.",
+       "الأسعار والباقات بتختلف حسب الفرع والباقة. ابعتلنا رسالة وهنبعتهالك كل التفاصيل مرة واحدة."] },
+  { q:["Do you have group classes or only personal training?","في كلاسز جروب ولا تدريب شخصي بس؟"],
+    a:["Both. Group classes, personal training, yoga, Crossfit, plus sauna and jacuzzi to recover afterwards.",
+       "الاتنين. كلاسز جروب، تدريب شخصي، يوجا، كروسفيت، وسونا وجاكوزي للاستشفاء بعد التمرين."] },
+  { q:["Can I book through the app?","ينفع أحجز من التطبيق؟"],
+    a:["Yes. The Iconfit app lets you search class schedules, build your own schedule and manage your member account.",
+       "أيوه. تطبيق Iconfit يتيحلك تبحث في جداول الكلاسز، تعمل برنامجك الشخصي، وتدير حساب العضوية."] },
+  { q:["The app won't install — what now?","التطبيق مش بيتحمّل، أعمل إيه؟"],
+    a:["Send us a WhatsApp message. We'll send you the right install link and help you link your account.",
+       "ابعتلنا على واتساب وهنبعتلك لينك التحميل المناسب ونساعدك تربط حسابك."] },
+  { q:["Is it free to ask you anything?","الاستفسار عليكو مجاني؟"],
+    a:["Completely. Every question goes straight to our WhatsApp — no call charges, no service fees, no queues.",
+       "تمام مجاني. كل سؤال بيتبعت على واتساب على طول — من غير رسوم ولا طوابير."] }
+];
+
+/* ═══════════ RENDER ═══════════ */
+let LANG = 'en';
+try { LANG = localStorage.getItem('iconfit-lang') === 'ar' ? 'ar' : 'en'; } catch(e){}
+
+function waLink(text){
+  return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text).replace(/'/g,'%27');
+}
+function t(k){ return (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k; }
+function svg(name, sw){
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+(sw||1.6)+'" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[name]||'')+'</svg>';
+}
+function arw(){ return svg('arrow', 1.8).replace('<svg','<svg class="arw"'); }
+function put(id, html){ document.getElementById(id).innerHTML = html; }
+
+function render(){
+  document.documentElement.lang = LANG;
+  document.documentElement.dir  = LANG === 'ar' ? 'rtl' : 'ltr';
+  document.title = LANG === 'ar'
+    ? 'IconFit — لياقة وأكتر | مدينتي · إل ريب · هاسيندا باي'
+    : 'IconFit — Fitness & Beyond | Madinaty · El-Rehab City · Hacienda Bay';
+
+  /* marquee — duplicated so the -50% loop is seamless */
+  const mqItems = [];
+  for (let i = 1; i <= 10; i++) mqItems.push('<span>' + t('mq.' + i) + '</span><i></i>');
+  const grp = '<div class="mq-grp">' + mqItems.join('') + '</div>';
+  put('mqtrack', grp + grp);
+
+  put('stats', STATS.map(s =>
+    '<div class="stat"><b>' + s[0] + '</b><span>' + t(s[1]) + '</span></div>'
+  ).join(''));
+
+  put('am-grid', AMENITIES.map((a, i) => {
+    const d = LANG === 'ar' ? a.ar : a.en;
+    return '<article class="am r" data-d="' + ((i % 4) + 1) + '">' +
+      '<div class="am-ico">' + svg(a.icon) + '</div>' +
+      '<h3>' + d[0] + '</h3><p>' + d[1] + '</p></article>';
+  }).join(''));
+
+  put('am-chips', CHIPS[LANG].map(c => '<span class="chip">' + c + '</span>').join(''));
+
+  put('gal-grid',
+    GYM_PHOTOS.map((src, i) =>
+      '<button class="gi r" data-d="' + ((i % 8) + 1) + '" type="button" data-lb="' + i + '" aria-label="' + t('gal.title') + ' ' + (i + 1) + '">' +
+        '<img src="assets/' + src + '" alt="IconFit gym — photo ' + (i + 1) + '" loading="lazy">' +
+        '<span class="z">' + svg('search', 1.7) + '</span></button>'
+    ).join('') +
+    '<div class="gi gi--brand r" data-d="4">' +
+      '<img src="assets/logo.jpg" alt="IconFit logo">' +
+      '<b>ICON<i>FIT</i></b><small>' + t('gal.mark') + '</small></div>'
+  );
+
+  put('off-grid', OFFERS.map((o, i) => {
+    const d = o[LANG];
+    const n = String(i + 1).padStart(2, '0');
+    return '<article class="of r' + (o.dark ? ' of--dark' : '') + '" data-d="' + ((i % 4) + 1) + '">' +
+      '<div class="of-top"><div class="of-ico">' + svg(o.icon) + '</div>' +
+      '<span class="of-n">' + (o.dark ? t('off.kick').toUpperCase() : n) + '</span></div>' +
+      '<h3>' + d.title + '</h3><p>' + d.text + '</p>' +
+      '<a class="tlink" href="' + waLink(d.msg) + '" target="_blank" rel="noopener">' + t('ask') + arw() + '</a>' +
+      '</article>';
+  }).join(''));
+
+  put('feat-list', FEATURES.map(f => {
+    const d = LANG === 'ar' ? f.ar : f.en;
+    return '<li><span class="fi">' + svg(f.icon) + '</span><div><b>' + d[0] + '</b><p>' + d[1] + '</p></div></li>';
+  }).join(''));
+
+  put('specs', [
+    ['spec.cat','Health &amp; Fitness'],
+    ['spec.size','58.8 MB'],
+    ['spec.ver','1.0.1'],
+    ['spec.ios','iOS 12.0+'],
+    ['spec.rating','4+'],
+    ['spec.privacy', t('spec.nocollect')]
+  ].map(s => '<div class="spec"><b>' + t(s[0]) + '</b><span>' + s[1] + '</span></div>').join(''));
+
+  put('br-grid', BRANCHES.map((b, i) => {
+    const d = LANG === 'ar' ? b.ar[0] : b.en[0];
+    const nm = LANG === 'ar' ? b.arName : b.name;
+    const msg = LANG === 'ar'
+      ? 'السلام عليكم 👋 عايز أستفسر عن فرع ' + nm
+      : "Hello 👋 I'd like to know more about the " + nm + ' branch.';
+    return '<article class="br r" data-d="' + (i + 1) + '">' +
+      '<span class="br-n">' + String(i + 1).padStart(2, '0') + '</span>' +
+      '<div class="br-ico">' + svg('pin') + '</div>' +
+      '<h3>' + nm + '</h3><p>' + d + '</p>' +
+      '<a class="tlink" href="' + waLink(msg) + '" target="_blank" rel="noopener">' + t('ask') + arw() + '</a>' +
+      '</article>';
+  }).join(''));
+
+  put('faq-list', FAQ.map(f => {
+    const q = LANG === 'ar' ? f.q[1] : f.q[0];
+    const a = LANG === 'ar' ? f.a[1] : f.a[0];
+    const msg = LANG === 'ar' ? 'السلام عليكم 👋 عندي سؤال: ' + q : 'Hello 👋 I have a question: ' + q;
+    return '<details class="r"><summary>' + q + '<span class="smark"></span></summary>' +
+      '<div class="faq-a"><p>' + a + '</p>' +
+      '<a class="btn btn--sm" href="' + waLink(msg) + '" target="_blank" rel="noopener">' +
+      svg('arrow', 1.8).replace('<svg','<svg class="arw"') + t('ask') + '</a></div></details>';
+  }).join(''));
+
+  applyI18n();
+  observe();
+}
+
+/* Runs last so it also covers markup generated by render() */
+function applyI18n(){
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
+  document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === LANG));
+}
+
+/* ── reveal on scroll ───────────────────────────────────── */
+let io;
+function observe(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('.r').forEach(el => el.classList.add('in'));
+    return;
+  }
+  if (!io) io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.r:not(.in)').forEach(el => io.observe(el));
+
+  /* safety net: a fast flick/scrollbar drag can jump past an element
+     between observer samples, so sweep anything already at/above the fold */
+  if (!sweepBound){
+    sweepBound = true;
+    let rt;
+    addEventListener('scroll', () => { clearTimeout(rt); rt = setTimeout(sweep, 110); }, { passive:true });
+    addEventListener('resize', sweep);
+  }
+  sweep();
+}
+let sweepBound = false;
+function sweep(){
+  const vh = window.innerHeight;
+  document.querySelectorAll('.r:not(.in)').forEach(el => {
+    if (el.getBoundingClientRect().top < vh * 0.94){
+      el.classList.add('in');
+      if (io) io.unobserve(el);
+    }
+  });
+  if (typeof countUp === 'function') document.querySelectorAll('.stat b:not([data-counted])').forEach(el => {
+    if (el.getBoundingClientRect().top < vh) countUp(el);
+  });
+}
+
+/* ── lightbox ───────────────────────────────────────────── */
+let lbI = 0;
+const lbBox = document.getElementById('lb');
+const lbImg = document.getElementById('lbImg');
+const lbCnt = document.getElementById('lbC');
+function lbOpen(i){
+  lbI = (i + GYM_PHOTOS.length) % GYM_PHOTOS.length;
+  lbImg.src = 'assets/' + GYM_PHOTOS[lbI];
+  lbImg.alt = 'IconFit gym — photo ' + (lbI + 1);
+  lbCnt.textContent = String(lbI + 1).padStart(2, '0') + ' / ' + String(GYM_PHOTOS.length).padStart(2, '0');
+  lbBox.classList.add('on');
+  document.body.style.overflow = 'hidden';
+}
+function lbClose(){ lbBox.classList.remove('on'); document.body.style.overflow = ''; }
+document.getElementById('gal-grid').addEventListener('click', e => {
+  const b = e.target.closest('[data-lb]');
+  if (b) lbOpen(+b.dataset.lb);
+});
+document.getElementById('lbX').addEventListener('click', lbClose);
+document.getElementById('lbP').addEventListener('click', () => lbOpen(lbI - 1));
+document.getElementById('lbN').addEventListener('click', () => lbOpen(lbI + 1));
+lbBox.addEventListener('click', e => { if (e.target === lbBox) lbClose(); });
+document.addEventListener('keydown', e => {
+  if (!lbBox.classList.contains('on')) return;
+  if (e.key === 'Escape') lbClose();
+  if (e.key === 'ArrowRight') lbOpen(lbI + (LANG === 'ar' ? -1 : 1));
+  if (e.key === 'ArrowLeft')  lbOpen(lbI + (LANG === 'ar' ?  1 : -1));
+});
+
+/* ── WhatsApp wiring ────────────────────────────────────── */
+const WA_MSG = {
+  nav:       { en:"Hello 👋 I'd like to ask about IconFit memberships.", ar:"السلام عليكم 👋 عايز أستفسر عن اشتراكات IconFit." },
+  offer:     { en:"Hello 👋 I'd like to know about IconFit memberships and prices.", ar:"السلام عليكم 👋 عايز أعرف تفاصيل اشتراكات IconFit وأسعارها." },
+  start:     { en:"Hello 👋 I'd like to book a spot at IconFit.", ar:"السلام عليكم 👋 عايز أحجز مكان في IconFit." },
+  fab:       { en:"Hello 👋 I have a question about IconFit.", ar:"السلام عليكم 👋 عندي سؤال عن IconFit." },
+  "app-help":{ en:"Hello 👋 I need help installing the IconFit app and linking my account.", ar:"السلام عليكم 👋 محتاج مساعدة في تحميل تطبيق IconFit وربط حسابي." }
+};
+function bindWA(){
+  document.querySelectorAll('[data-wa]').forEach(el => {
+    if (el.__wa) return;
+    el.__wa = true;
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      const m = WA_MSG[el.dataset.wa];
+      window.open(waLink(LANG === 'ar' ? m.ar : m.en), '_blank', 'noopener');
+      toast(t('toast'));
+    });
+  });
+}
+let toastT;
+function toast(text){
+  const b = document.getElementById('toast');
+  b.textContent = text; b.classList.add('on');
+  clearTimeout(toastT);
+  toastT = setTimeout(() => b.classList.remove('on'), 3400);
+}
+
+/* ── mobile menu ────────────────────────────────────────── */
+const burger = document.getElementById('burger');
+const mmenu  = document.getElementById('mmenu');
+function setMenu(on){
+  burger.classList.toggle('on', on);
+  mmenu.classList.toggle('on', on);
+  burger.setAttribute('aria-expanded', on ? 'true' : 'false');
+  document.body.style.overflow = on ? 'hidden' : '';
+}
+burger.addEventListener('click', () => setMenu(!mmenu.classList.contains('on')));
+mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape' && mmenu.classList.contains('on')) setMenu(false); });
+addEventListener('resize', () => { if (innerWidth > 1080 && mmenu.classList.contains('on')) setMenu(false); });
+
+/* ── sticky header + active nav ─────────────────────────── */
+const hdr = document.getElementById('hdr');
+const secs = ['amenities','gallery','offers','app','branches','faq'];
+addEventListener('scroll', () => {
+  hdr.classList.toggle('nav-stuck', scrollY > 8);
+  let cur = '';
+  for (const id of secs){
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 140) cur = id;
+  }
+  document.querySelectorAll('#nlinks a').forEach(a =>
+    a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+}, { passive: true });
+
+/* ── language switch ────────────────────────────────────── */
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => {
+  LANG = b.dataset.lang;
+  try { localStorage.setItem('iconfit-lang', LANG); } catch(e){}
+  render();
+  bindWA();
+  watchStats();
+  bindMagnetic();
+}));
+
+/* ── scroll progress + stat counters (energy layer) ──────── */
+const prog = document.getElementById('prog');
+let progQueued = false;
+function paintProg(){
+  const max = document.documentElement.scrollHeight - innerHeight;
+  prog.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0) + ')';
+  progQueued = false;
+}
+addEventListener('scroll', () => {
+  if (progQueued) return;
+  progQueued = true;
+  requestAnimationFrame(paintProg);
+}, { passive: true });
+addEventListener('resize', paintProg);
+paintProg();
+
+function countUp(el){
+  if (!el || el.dataset.counted) return;
+  el.dataset.counted = '1';
+  const raw = el.textContent.trim();
+  const m = raw.match(/^([\d.]+)([\s\S]*)$/);
+  if (!m) return;
+  const target = parseFloat(m[1]), suffix = m[2], dur = 1200, t0 = performance.now();
+  const step = now => {
+    const p = Math.min(1, (now - t0) / dur);
+    const e = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * e).toLocaleString('en-US') + suffix;
+    if (p < 1) requestAnimationFrame(step); else el.textContent = raw;
+  };
+  requestAnimationFrame(step);
+}
+let ioStat;
+function watchStats(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('.stat b').forEach(countUp);
+    return;
+  }
+  if (!ioStat) ioStat = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ countUp(e.target); ioStat.unobserve(e.target); }
+  }), { threshold: 0.45 });
+  document.querySelectorAll('.stat b').forEach(el => ioStat.observe(el));
+}
+
+/* ── motion II: intro, parallax, magnetic, back-to-top ───── */
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+/* intro — once per browser session, and the CSS animation frees the page
+   on its own even if this script never runs */
+(function introOnce(){
+  const box = document.getElementById('intro');
+  if (!box) return;
+  let seen = false;
+  try { seen = sessionStorage.getItem('iconfit-intro') === '1'; } catch (e) {}
+  if (seen || reduced){ box.remove(); return; }
+  try { sessionStorage.setItem('iconfit-intro', '1'); } catch (e) {}
+  const kill = () => { if (box.parentNode) box.remove(); };
+  box.addEventListener('animationend', ev => { if (ev.animationName === 'introOut') kill(); });
+  setTimeout(kill, 1800);
+})();
+
+/* subtle parallax on the hero frame */
+const hfigMain = document.querySelector('.hfig-main');
+if (hfigMain && !reduced){
+  let pxQueued = false;
+  const paintPx = () => {
+    pxQueued = false;
+    if (scrollY > innerHeight * 1.1){ hfigMain.style.transform = ''; return; }
+    hfigMain.style.transform = 'translate3d(0,' + Math.round(scrollY * 0.07) + 'px,0)';
+  };
+  addEventListener('scroll', () => {
+    if (pxQueued) return;
+    pxQueued = true;
+    requestAnimationFrame(paintPx);
+  }, { passive: true });
+  paintPx();
+}
+
+/* magnetic buttons — fine pointers only */
+function bindMagnetic(){
+  if (!finePointer || reduced) return;
+  document.querySelectorAll('.btn, .totop').forEach(el => {
+    if (el.dataset.mag) return;
+    el.dataset.mag = '1';
+    el.addEventListener('pointermove', e => {
+      const r = el.getBoundingClientRect();
+      const dx = (e.clientX - (r.left + r.width / 2)) / r.width;
+      const dy = (e.clientY - (r.top + r.height / 2)) / r.height;
+      el.style.transform = 'translate(' + (dx * 8).toFixed(2) + 'px,' + (dy * 6).toFixed(2) + 'px)';
+    });
+    el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+  });
+}
+
+/* back to top */
+const totop = document.getElementById('totop');
+if (totop){
+  addEventListener('scroll', () => { totop.classList.toggle('on', scrollY > innerHeight * 0.9); }, { passive: true });
+  totop.addEventListener('click', () => scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }));
+}
+
+/* ── boot ───────────────────────────────────────────────── */
+document.getElementById('yr').textContent = new Date().getFullYear();
+render();
+bindWA();
+watchStats();
+bindMagnetic();
+</script>
+</body>
+</html>
