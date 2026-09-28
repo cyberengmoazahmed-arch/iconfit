@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cyberengmoazahmed-arch.github.io/iconfit/iconfit/sitemap.xml
+Sitemap: https://cyberengmoazahmed-arch.github.io/iconfit/sitemap.xml
