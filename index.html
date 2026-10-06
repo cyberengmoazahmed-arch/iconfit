@@ -676,9 +676,6 @@ html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
 .spin-wheel .w0{fill:var(--ink);stroke:var(--ink)}
 .spin-wheel .w1{fill:var(--acc);stroke:var(--ink)}
 .spin-wheel .w2{fill:#fff;stroke:var(--line-2)}
-.spin-wheel text{font-family:'Inter',system-ui,sans-serif}
-.spin-wheel .t0{fill:#fff}
-.spin-wheel .t1,.spin-wheel .t2{fill:var(--ink)}
 
 .spin-pointer{position:absolute;top:-11px;left:50%;transform:translateX(-50%);z-index:5;
   width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;
@@ -720,6 +717,21 @@ html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
 .spin-price em{font-style:normal;font-size:.4em;font-weight:700;color:var(--t-mid);margin-inline-start:7px}
 .spin-warn{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
   font-size:13.5px;font-weight:600;color:var(--ink);display:flex;gap:9px;align-items:flex-start;line-height:1.55}
+.spin-all{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.spin-all-h{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--t-mid);margin-bottom:9px}
+.spin-all-row{display:flex;align-items:center;gap:10px;padding:9px 13px;
+  border:1px solid var(--line);border-radius:var(--r);font-size:14px}
+.spin-all-row + .spin-all-row{margin-top:6px}
+.spin-all-row i{font-style:normal;width:16px;height:16px;border-radius:50%;display:grid;place-items:center;
+  background:var(--acc);color:var(--acc-ink);font-size:10px;line-height:1;flex:0 0 auto}
+.spin-all-name{flex:1;color:var(--t-mid);line-height:1.4}
+.spin-all-row b{font-weight:800;font-size:15px;letter-spacing:-.01em;white-space:nowrap}
+.spin-all-row em{font-style:normal;font-size:11.5px;font-weight:700;color:var(--t-mid);
+  margin-inline-start:4px;white-space:nowrap}
+.spin-all-row.hit{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc);background:#fff}
+.spin-all-row.hit .spin-all-name{color:var(--ink)}
+.spin-all-row.hit b{color:var(--acc-ink)}
 .spin-acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
 
 .spin-fab{position:fixed;inset-inline-end:20px;bottom:78px;z-index:106;
@@ -1156,6 +1168,7 @@ const I18N = {
     "spin.terms":"Message us before coming to the gym to secure this offer.",
     "spin.expires":"24 hours only — no extension",
     "spin.share":"Send this offer on WhatsApp",
+"spin.all":"All today's prices",
     "spin.again":"You already used your spin — this is your offer.",
     "spin.call":"Call us"
   },
@@ -1205,6 +1218,7 @@ const I18N = {
     "spin.expires":"24 ساعة بس — بدون تمديد",
     "spin.share":"ابعت العرض على واتساب",
     "spin.again":"لفّيت قبل كده — عرضك موجود تحت.",
+    "spin.all":"كل أسعار اليوم",
     "spin.call":"كلمنا"
   }
 };
@@ -1483,14 +1497,6 @@ function renderWheel(){
     s += '<path class="w' + i + '" d="M' + C + ',' + C + ' L' + pt(i * SEG_DEG) +
          ' A' + R + ',' + R + ' 0 0,1 ' + pt((i + 1) * SEG_DEG) + ' Z" stroke-width="1.2"/>';
   }
-  for (let i = 0; i < SPIN_OFFERS.length; i++){
-    const d = SPIN_OFFERS[i][LANG] || SPIN_OFFERS[i].en;
-    const a = (i * SEG_DEG + SEG_DEG / 2) * Math.PI / 180;
-    const x = (C + 56 * Math.sin(a)).toFixed(2);
-    const y = C - 56 * Math.cos(a);
-    s += '<text class="t' + i + '" x="' + x + '" y="' + (y - 3).toFixed(2) + '" text-anchor="middle" font-size="8.4" font-weight="700">' + d.seg[0] + '</text>' +
-         '<text class="t' + i + '" x="' + x + '" y="' + (y + 10).toFixed(2) + '" text-anchor="middle" font-size="9.6" font-weight="800" opacity=".85">' + d.seg[1] + '</text>';
-  }
   put('spinWheel', s + '</svg>');
 }
 
@@ -1500,6 +1506,14 @@ function renderSpinResult(){
   const rows = d.rows.map((r, i) =>
     '<div class="spin-row"><i>' + (i === 0 ? '🎁' : '💰') + '</i><span>' + r + '</span></div>'
   ).join('');
+  const all = SPIN_OFFERS.map((o, i) => {
+    const od = o[LANG] || o.en;
+    const hit = i === spinDone;
+    return '<div class="spin-all-row' + (hit ? ' hit' : '') + '">' +
+      (hit ? '<i aria-hidden="true">✓</i>' : '') +
+      '<span class="spin-all-name">' + od.seg[0] + '</span>' +
+      '<b>' + od.seg[1] + '</b><em>' + od.unit + '</em></div>';
+  }).join('');
   spinResEl.innerHTML =
     '<div class="spin-card">' +
       '<div class="spin-card-top">' +
@@ -1511,6 +1525,10 @@ function renderSpinResult(){
         '<div class="spin-rows">' + rows + '</div>' +
         '<div class="spin-price">' + d.price + '<em>' + d.unit + '</em></div>' +
         '<div class="spin-warn"><span>⚠️</span><span>' + t('spin.terms') + '</span></div>' +
+        '<div class="spin-all">' +
+          '<div class="spin-all-h">' + t('spin.all') + '</div>' +
+          all +
+        '</div>' +
         '<div class="spin-acts">' +
           '<a class="btn" href="' + waLink(d.msg) + '" target="_blank" rel="noopener">' +
             svg('arrow', 1.8).replace('<svg', '<svg class="arw"') +
