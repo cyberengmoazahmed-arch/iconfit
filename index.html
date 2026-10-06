@@ -665,16 +665,92 @@ html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
 .totop svg{width:17px;height:17px;stroke-width:1.9;transition:transform .3s var(--ease)}
 .totop:hover svg{transform:translateY(-3px)}
 
+/* ── spin wheel ────────────────────────────────────────── */
+.spin-stage{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.spin-wheel-box{position:relative;width:min(440px,84vw);aspect-ratio:1;margin-inline:auto}
+
+.spin-wheel{position:absolute;inset:0;border-radius:50%;will-change:transform;transform:rotate(0deg);
+  transition:transform 5.4s cubic-bezier(.11,.84,.19,1);
+  box-shadow:0 40px 90px -34px rgba(0,0,0,.5)}
+.spin-wheel svg{display:block;width:100%;height:100%;border-radius:50%}
+.spin-wheel .w0{fill:var(--ink);stroke:var(--ink)}
+.spin-wheel .w1{fill:var(--acc);stroke:var(--ink)}
+.spin-wheel .w2{fill:#fff;stroke:var(--line-2)}
+.spin-wheel text{font-family:'Inter',system-ui,sans-serif}
+.spin-wheel .t0{fill:#fff}
+.spin-wheel .t1,.spin-wheel .t2{fill:var(--ink)}
+
+.spin-pointer{position:absolute;top:-11px;left:50%;transform:translateX(-50%);z-index:5;
+  width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;
+  border-top:25px solid var(--ink);filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+
+.spin-hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:6;
+  width:clamp(94px,23%,132px);aspect-ratio:1;border-radius:50%;cursor:pointer;
+  background:var(--ink);color:#fff;border:5px solid var(--paper);
+  font-family:'Inter',system-ui,sans-serif;font-size:14px;font-weight:800;letter-spacing:.15em;
+  box-shadow:0 18px 42px -14px rgba(0,0,0,.55);
+  transition:transform .3s var(--ease),background .3s,color .3s}
+.spin-hub:hover{background:var(--acc);color:var(--acc-ink);transform:translate(-50%,-50%) scale(1.06)}
+.spin-hub[disabled]{cursor:default;opacity:.55}
+.spin-hub[disabled]:hover{background:var(--ink);color:#fff;transform:translate(-50%,-50%)}
+.spin-hub-t{display:block;line-height:1}
+
+.spin-panel{max-width:520px}
+.spin-note{margin-top:16px;color:var(--t-mid);font-size:14.5px;line-height:1.65;max-width:46ch}
+.spin-result{margin-top:22px}
+.spin-result:empty{display:none}
+
+.spin-card{border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--paper);
+  animation:spinIn .5s var(--ease) both}
+@keyframes spinIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.spin-card-top{background:var(--ink);color:#fff;padding:15px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.spin-badge{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--acc-ink);background:var(--acc);padding:6px 11px;border-radius:99px;white-space:nowrap}
+.spin-card-top b{font-size:14.5px;font-weight:700;letter-spacing:.01em}
+.spin-card-body{padding:22px}
+.spin-who{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--t-mid);margin-bottom:5px}
+.spin-tier{font-size:clamp(21px,3vw,29px);font-weight:800;line-height:1.18;margin-bottom:18px}
+.spin-rows{display:grid;gap:11px;margin-bottom:20px}
+.spin-row{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.55}
+.spin-row i{font-style:normal;flex:0 0 auto;line-height:1.4}
+.spin-row span{color:var(--t-mid)}
+.spin-price{font-size:clamp(30px,4.4vw,44px);font-weight:900;letter-spacing:-.02em;line-height:1}
+.spin-price em{font-style:normal;font-size:.4em;font-weight:700;color:var(--t-mid);margin-inline-start:7px}
+.spin-warn{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:13.5px;font-weight:600;color:var(--ink);display:flex;gap:9px;align-items:flex-start;line-height:1.55}
+.spin-acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+
+.spin-fab{position:fixed;inset-inline-end:20px;bottom:78px;z-index:106;
+  display:flex;align-items:center;gap:9px;padding:11px 17px;
+  background:var(--acc);color:var(--acc-ink);border:1px solid var(--acc);border-radius:99px;
+  font-family:'Inter',system-ui,sans-serif;font-size:13.5px;font-weight:700;cursor:pointer;
+  opacity:0;visibility:hidden;transform:translateY(14px);white-space:nowrap;
+  transition:opacity .32s var(--ease),transform .32s var(--ease),visibility .32s,box-shadow .3s,background .3s,color .3s;
+  box-shadow:0 16px 42px -14px rgba(0,0,0,.55)}
+.spin-fab.on{opacity:1;visibility:visible;transform:none}
+.spin-fab:hover{background:var(--ink);color:var(--acc);border-color:var(--ink);transform:translateY(-3px)}
+.spin-fab-i{display:grid;place-items:center;width:17px;height:17px}
+.spin-fab-i svg{width:17px;height:17px}
+
 /* ── parallax hook ──────────────────────────────────────── */
 .hfig-main{will-change:transform}
 
-@media(max-width:900px){ .totop{display:none} }
+@media(max-width:900px){ .totop{display:none} .spin-fab{bottom:20px} }
+@media(max-width:980px){
+  .spin-stage{grid-template-columns:1fr;gap:36px}
+  .spin-panel{max-width:none}
+}
 @media(prefers-reduced-motion:reduce){
   .intro{display:none!important}
   .shead .shead-row{clip-path:none;transition:none}
   .shead h2::after{transition:none}
   .faq details[open] .faq-a{animation:none}
   .totop{transition:opacity .2s,visibility .2s}
+  .spin-wheel{transition:none}
+  .spin-card{animation:none}
+  .spin-fab{transition:opacity .2s,visibility .2s}
 }
 
 
@@ -889,6 +965,35 @@ html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
     </div>
   </section>
 
+  <!-- ══════════ 07 SPIN ══════════ -->
+  <section class="sect sect--spin" id="spin">
+    <div class="wrap">
+      <div class="shead r" style="max-width:760px">
+        <div class="shead-row"><span class="snum">07</span><span class="skick" data-i18n="spin.kick">24 hours only</span></div>
+        <h2 data-i18n="spin.title">Spin the wheel, lock your offer</h2>
+        <p data-i18n="spin.lead">One spin per visit. Land on an offer, then send it straight to WhatsApp before it runs out.</p>
+      </div>
+
+      <div class="spin-stage r">
+        <div class="spin-wheel-box">
+          <div class="spin-pointer" aria-hidden="true"></div>
+          <div class="spin-wheel" id="spinWheel" aria-hidden="true"></div>
+          <button class="spin-hub" id="spinHub" type="button">
+            <span class="spin-hub-t" data-i18n="spin.fab">Spin &amp; win</span>
+          </button>
+        </div>
+
+        <div class="spin-panel">
+          <button class="btn btn--full spin-go" id="spinGo" type="button">
+            <span data-i18n="spin.go">Spin the wheel</span>
+          </button>
+          <p class="spin-note" id="spinNote" data-i18n="spin.terms">Message us before coming to the gym to secure this offer.</p>
+          <div class="spin-result" id="spinResult" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════ CTA ══════════ -->
   <section class="cta-band">
     <div class="wrap cta-inner r">
@@ -950,6 +1055,15 @@ html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
+<button class="spin-fab" id="spinFab" type="button">
+  <span class="spin-fab-i" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><path d="M12 3v4M21 12h-4M12 21v-4M3 12h4M12 12l4.2-4.2"/>
+    </svg>
+  </span>
+  <span data-i18n="spin.fab">Spin &amp; win</span>
+</button>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true">
@@ -964,6 +1078,37 @@ html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
 /* ═══════════ CONFIG — number + all copy live here ═══════════ */
 const WA_NUMBER = "201274745161";   /* 01274745161 in international format, no + */
 const BRAND = "IconFit";
+
+/* prize wheel — 3 equal segments, 120° each.
+   each offer carries its own display strings and the ready-made
+   WhatsApp message, in both languages. */
+const SPIN_OFFERS = [
+  {
+    en:{ seg:['MEN · NEW','12,800'], who:'Men — starting from 20 years', tier:'New · Annual Membership',
+         rows:['12 Months + 2 Months FREEZE','12,800 EGP CASH'], price:'12,800', unit:'EGP CASH',
+         msg:'🔥 ICONFIT GYM — 24 HOURS ONLY!\n\nI just spun the wheel on the IconFit website and won:\n\n👨 MEN — Annual Membership (NEW)\n• 12 Months + 2 Months FREEZE\n• 12,800 EGP CASH\n\n⚠️ 24 HOURS ONLY — NO EXTENSION.\n📲 I will message before coming to the gym to secure this offer.\n\n📞 Call me: 01274745161' },
+    ar:{ seg:['رجالي · جديد','12,800'], who:'رجالي — يبدأ من 20 سنة', tier:'جديد · اشتراك سنوي',
+         rows:['12 شهر + شهرين تجميد مجاناً','12,800 جنيه كاش'], price:'12,800', unit:'جنيه كاش',
+         msg:'🔥 ICONFIT GYM — عرض 24 ساعة بس!\n\nلفّيت عجلة الحظ على موقع IconFit وكسبت العرض ده:\n\n👨 رجالي — اشتراك سنوي (جديد)\n• 12 شهر + شهرين تجميد مجاناً\n• 12,800 جنيه كاش\n\n⚠️ 24 ساعة بس — بدون تمديد.\n📲 هبعت رسالة قبل ما أجي الجيم عشان أحجز العرض.\n\n📞 كلمني: 01274745161' }
+  },
+  {
+    en:{ seg:['MEN · RENEW','10,800'], who:'Men — starting from 20 years', tier:'Renew · Annual Membership',
+         rows:['12 Months + 2 Months FREEZE','10,800 EGP CASH'], price:'10,800', unit:'EGP CASH',
+         msg:'🔥 ICONFIT GYM — 24 HOURS ONLY!\n\nI just spun the wheel on the IconFit website and won:\n\n👨 MEN — Annual Membership (RENEW)\n• 12 Months + 2 Months FREEZE\n• 10,800 EGP CASH\n\n⚠️ 24 HOURS ONLY — NO EXTENSION.\n📲 I will message before coming to the gym to secure this offer.\n\n📞 Call me: 01274745161' },
+    ar:{ seg:['رجالي · تجديد','10,800'], who:'رجالي — يبدأ من 20 سنة', tier:'تجديد · اشتراك سنوي',
+         rows:['12 شهر + شهرين تجميد مجاناً','10,800 جنيه كاش'], price:'10,800', unit:'جنيه كاش',
+         msg:'🔥 ICONFIT GYM — عرض 24 ساعة بس!\n\nلفّيت عجلة الحظ على موقع IconFit وكسبت العرض ده:\n\n👨 رجالي — اشتراك سنوي (تجديد)\n• 12 شهر + شهرين تجميد مجاناً\n• 10,800 جنيه كاش\n\n⚠️ 24 ساعة بس — بدون تمديد.\n📲 هبعت رسالة قبل ما أجي الجيم عشان أحجز العرض.\n\n📞 كلمني: 01274745161' }
+  },
+  {
+    en:{ seg:['LADIES','9,900'], who:'Ladies — starting from 16 years', tier:'New / Renew · Annual Membership',
+         rows:['12 Months + 2 Months FREEZE','9,900 EGP CASH'], price:'9,900', unit:'EGP CASH',
+         msg:'🔥 ICONFIT GYM — 24 HOURS ONLY!\n\nI just spun the wheel on the IconFit website and won:\n\n👩 LADIES — Annual Membership (NEW / RENEW)\n• 12 Months + 2 Months FREEZE\n• 9,900 EGP CASH\n\n⚠️ 24 HOURS ONLY — NO EXTENSION.\n📲 I will message before coming to the gym to secure this offer.\n\n📞 Call me: 01274745161' },
+    ar:{ seg:['نسائي','9,900'], who:'نسائي — يبدأ من 16 سنة', tier:'جديد / تجديد · اشتراك سنوي',
+         rows:['12 شهر + شهرين تجميد مجاناً','9,900 جنيه كاش'], price:'9,900', unit:'جنيه كاش',
+         msg:'🔥 ICONFIT GYM — عرض 24 ساعة بس!\n\nلفّيت عجلة الحظ على موقع IconFit وكسبت العرض ده:\n\n👩 نسائي — اشتراك سنوي (جديد / تجديد)\n• 12 شهر + شهرين تجميد مجاناً\n• 9,900 جنيه كاش\n\n⚠️ 24 ساعة بس — بدون تمديد.\n📲 هبعت رسالة قبل ما أجي الجيم عشان أحجز العرض.\n\n📞 كلمني: 01274745161' }
+  }
+];
+const SEG_DEG = 360 / SPIN_OFFERS.length;
 
 const I18N = {
   en:{
@@ -1004,7 +1149,15 @@ const I18N = {
     "foot.app":"Android app","foot.ios":"iOS app","foot.wa":"WhatsApp",
     "foot.tag":"Uniting efforts, multiplying successes","foot.dev":"App by Redgits Solutions",
     "fab.text":"Send a message","toast":"Opening WhatsApp — write your question and we'll reply in minutes.",
-    "ask":"Ask about this"
+    "ask":"Ask about this",
+    "spin.kick":"24 hours only","spin.title":"Spin the wheel, lock your offer",
+    "spin.lead":"One spin per visit. Land on an offer, then send it straight to WhatsApp before it runs out.",
+    "spin.go":"Spin the wheel","spin.fab":"Spin & win",
+    "spin.terms":"Message us before coming to the gym to secure this offer.",
+    "spin.expires":"24 hours only — no extension",
+    "spin.share":"Send this offer on WhatsApp",
+    "spin.again":"You already used your spin — this is your offer.",
+    "spin.call":"Call us"
   },
   ar:{
     "nav.amenities":"الخدمات","nav.gallery":"الصور","nav.offers":"العروض",
@@ -1044,7 +1197,15 @@ const I18N = {
     "foot.app":"تطبيق أندرويد","foot.ios":"تطبيق آيفون","foot.wa":"واتساب",
     "foot.tag":"نجمع الجهد.. مضاعفة النجاح","foot.dev":"التطبيق من Redgits Solutions",
     "fab.text":"ابعت رسالة","toast":"بنفتح واتساب — اكتب سؤالك وهنرد عليك في دقايق.",
-    "ask":"اسأل عن ده"
+    "ask":"اسأل عن ده",
+    "spin.kick":"عرض 24 ساعة بس","spin.title":"لفّ العجلة واكسب عرضك",
+    "spin.lead":"لفة واحدة لكل زيارة. عرضك هيظهر لك على طول، وبعدين ابعته على واتساب قبل ما يخلص.",
+    "spin.go":"لفّ العجلة","spin.fab":"لفّ واكسب",
+    "spin.terms":"ابعتلنا رسالة قبل ما تيجي الجيم عشان تحجز العرض.",
+    "spin.expires":"24 ساعة بس — بدون تمديد",
+    "spin.share":"ابعت العرض على واتساب",
+    "spin.again":"لفّيت قبل كده — عرضك موجود تحت.",
+    "spin.call":"كلمنا"
   }
 };
 
@@ -1268,6 +1429,8 @@ function render(){
   }).join(''));
 
   applyI18n();
+  renderWheel();
+  renderSpinState();
   observe();
 }
 
@@ -1277,6 +1440,147 @@ function applyI18n(){
   document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
   document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === LANG));
 }
+
+/* ═══════════ SPIN WHEEL ═══════════
+   one spin per browser; the outcome is picked with crypto randomness
+   and only remembered after the wheel has settled. */
+const SPIN_KEY = 'iconfit-spin-v1';
+const spinWheelEl = document.getElementById('spinWheel');
+const spinHubEl   = document.getElementById('spinHub');
+const spinGoEl    = document.getElementById('spinGo');
+const spinResEl   = document.getElementById('spinResult');
+let spinDone  = null;   /* index of a claimed offer, or null */
+let spinning  = false;
+
+try {
+  const raw = localStorage.getItem(SPIN_KEY);
+  if (raw !== null && SPIN_OFFERS[+raw]) spinDone = +raw;
+} catch(e){}
+
+/* rotation that puts segment i's centre under the top pointer */
+function spinAngle(i){
+  const centre = i * SEG_DEG + SEG_DEG / 2;
+  return 360 * 5 + ((360 - centre) % 360);
+}
+
+function pickIndex(){
+  if (window.crypto && crypto.getRandomValues){
+    const a = new Uint32Array(1);
+    crypto.getRandomValues(a);
+    return a[0] % SPIN_OFFERS.length;
+  }
+  return Math.floor(Math.random() * SPIN_OFFERS.length);
+}
+
+function renderWheel(){
+  const R = 96, C = 100;
+  const pt = a => {
+    const r = a * Math.PI / 180;
+    return (C + R * Math.sin(r)).toFixed(2) + ',' + (C - R * Math.cos(r)).toFixed(2);
+  };
+  let s = '<svg viewBox="0 0 200 200" aria-hidden="true">';
+  for (let i = 0; i < SPIN_OFFERS.length; i++){
+    s += '<path class="w' + i + '" d="M' + C + ',' + C + ' L' + pt(i * SEG_DEG) +
+         ' A' + R + ',' + R + ' 0 0,1 ' + pt((i + 1) * SEG_DEG) + ' Z" stroke-width="1.2"/>';
+  }
+  for (let i = 0; i < SPIN_OFFERS.length; i++){
+    const d = SPIN_OFFERS[i][LANG] || SPIN_OFFERS[i].en;
+    const a = (i * SEG_DEG + SEG_DEG / 2) * Math.PI / 180;
+    const x = (C + 56 * Math.sin(a)).toFixed(2);
+    const y = C - 56 * Math.cos(a);
+    s += '<text class="t' + i + '" x="' + x + '" y="' + (y - 3).toFixed(2) + '" text-anchor="middle" font-size="8.4" font-weight="700">' + d.seg[0] + '</text>' +
+         '<text class="t' + i + '" x="' + x + '" y="' + (y + 10).toFixed(2) + '" text-anchor="middle" font-size="9.6" font-weight="800" opacity=".85">' + d.seg[1] + '</text>';
+  }
+  put('spinWheel', s + '</svg>');
+}
+
+function renderSpinResult(){
+  if (spinDone === null){ spinResEl.innerHTML = ''; return; }
+  const d = SPIN_OFFERS[spinDone][LANG] || SPIN_OFFERS[spinDone].en;
+  const rows = d.rows.map((r, i) =>
+    '<div class="spin-row"><i>' + (i === 0 ? '🎁' : '💰') + '</i><span>' + r + '</span></div>'
+  ).join('');
+  spinResEl.innerHTML =
+    '<div class="spin-card">' +
+      '<div class="spin-card-top">' +
+        '<b>' + BRAND + '</b><span class="spin-badge">' + t('spin.expires') + '</span>' +
+      '</div>' +
+      '<div class="spin-card-body">' +
+        '<div class="spin-who">' + d.who + '</div>' +
+        '<div class="spin-tier">' + d.tier + '</div>' +
+        '<div class="spin-rows">' + rows + '</div>' +
+        '<div class="spin-price">' + d.price + '<em>' + d.unit + '</em></div>' +
+        '<div class="spin-warn"><span>⚠️</span><span>' + t('spin.terms') + '</span></div>' +
+        '<div class="spin-acts">' +
+          '<a class="btn" href="' + waLink(d.msg) + '" target="_blank" rel="noopener">' +
+            svg('arrow', 1.8).replace('<svg', '<svg class="arw"') +
+            '<span>' + t('spin.share') + '</span></a>' +
+          '<a class="btn btn--ghost btn--sm" href="tel:01274745161">' + t('spin.call') + '</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+}
+
+/* state already on disk — no animation, just reflect it */
+function renderSpinState(){
+  if (spinDone === null) return;
+  spinWheelEl.style.transition = 'none';
+  spinWheelEl.style.transform = 'rotate(' + spinAngle(spinDone) + 'deg)';
+  void spinWheelEl.offsetWidth;
+  spinWheelEl.style.transition = '';
+  spinHubEl.disabled = true;
+  spinGoEl.disabled = true;
+  document.getElementById('spinNote').textContent = t('spin.again');
+  renderSpinResult();
+}
+
+function doSpin(){
+  if (spinning || spinDone !== null) return;
+  spinning = true;
+  spinHubEl.disabled = true;
+  spinGoEl.disabled = true;
+
+  const i = pickIndex();
+
+  if (reduced){
+    spinDone = i;
+    try { localStorage.setItem(SPIN_KEY, String(i)); } catch(e){}
+    renderSpinState();
+    spinning = false;
+    return;
+  }
+
+  spinWheelEl.style.transform = 'rotate(' + spinAngle(i) + 'deg)';
+
+  let settled = false;
+  const settle = () => {
+    if (settled) return;
+    settled = true;
+    spinWheelEl.removeEventListener('transitionend', settle);
+    spinDone = i;
+    try { localStorage.setItem(SPIN_KEY, String(i)); } catch(e){}
+    renderSpinResult();
+    spinning = false;
+  };
+  spinWheelEl.addEventListener('transitionend', settle);
+  setTimeout(settle, 6500);   /* transitionend can be missed if the tab is backgrounded */
+}
+
+if (spinGoEl)  spinGoEl.addEventListener('click', doSpin);
+if (spinHubEl) spinHubEl.addEventListener('click', doSpin);
+
+/* floating shortcut — appears once the visitor has moved past the hero */
+const spinFabEl = document.getElementById('spinFab');
+if (spinFabEl){
+  addEventListener('scroll', () => {
+    spinFabEl.classList.toggle('on', scrollY > innerHeight * 0.6);
+  }, { passive: true });
+  spinFabEl.addEventListener('click', () => {
+    const box = document.getElementById('spin');
+    if (box) box.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+  });
+}
+
 
 /* ── reveal on scroll ───────────────────────────────────── */
 let io;
