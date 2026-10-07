@@ -673,19 +673,25 @@ html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
   transition:transform 5.4s cubic-bezier(.11,.84,.19,1);
   box-shadow:0 40px 90px -34px rgba(0,0,0,.5)}
 .spin-wheel svg{display:block;width:100%;height:100%;border-radius:50%}
-.spin-wheel .w0{fill:var(--ink);stroke:var(--ink)}
-.spin-wheel .w1{fill:var(--acc);stroke:var(--ink)}
-.spin-wheel .w2{fill:#fff;stroke:var(--line-2)}
+.spin-wheel .w0{fill:var(--acc);stroke:var(--ink)}
+.spin-wheel .w1{fill:var(--ink);stroke:var(--ink)}
+.spin-wheel .w2{fill:#fff;stroke:var(--ink)}
+.spin-wheel .w3{fill:#cdd4da;stroke:var(--ink)}
+.spin-wheel .wr{fill:none;stroke:var(--ink);stroke-width:3}
+.spin-wheel .wb{fill:none;stroke:var(--ink);stroke-width:.7;opacity:.4}
+.spin-wheel .wp0{fill:var(--ink)}
+.spin-wheel .wp1{fill:#fff;stroke:var(--ink);stroke-width:.35}
 
-.spin-pointer{position:absolute;top:-11px;left:50%;transform:translateX(-50%);z-index:5;
-  width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;
-  border-top:25px solid var(--ink);filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.spin-pointer{position:absolute;top:-34px;left:50%;transform:translateX(-50%);z-index:7;
+  width:46px;height:44px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.32))}
+.spin-pointer svg{display:block;width:100%;height:100%}
 
 .spin-hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:6;
   width:clamp(94px,23%,132px);aspect-ratio:1;border-radius:50%;cursor:pointer;
-  background:var(--ink);color:#fff;border:5px solid var(--paper);
-  font-family:'Inter',system-ui,sans-serif;font-size:14px;font-weight:800;letter-spacing:.15em;
-  box-shadow:0 18px 42px -14px rgba(0,0,0,.55);
+  background:linear-gradient(160deg,#262626,#050505);color:#fff;border:5px solid var(--paper);
+  font-family:'Inter',system-ui,sans-serif;font-size:13px;font-weight:800;letter-spacing:.18em;
+  text-transform:uppercase;
+  box-shadow:inset 0 0 0 2px var(--acc),0 18px 42px -14px rgba(0,0,0,.55);
   transition:transform .3s var(--ease),background .3s,color .3s}
 .spin-hub:hover{background:var(--acc);color:var(--acc-ink);transform:translate(-50%,-50%) scale(1.06)}
 .spin-hub[disabled]{cursor:default;opacity:.55}
@@ -988,7 +994,13 @@ html[dir="rtl"] .shead h2::after{transform-origin:100% 50%}
 
       <div class="spin-stage r">
         <div class="spin-wheel-box">
-          <div class="spin-pointer" aria-hidden="true"></div>
+          <div class="spin-pointer" aria-hidden="true">
+            <svg viewBox="0 0 46 44" aria-hidden="true">
+              <circle cx="23" cy="8" r="8" fill="var(--acc)" stroke="var(--ink)" stroke-width="2"/>
+              <path d="M23 16 L42 22 L23 42 L4 22 Z" fill="var(--ink)"/>
+              <path d="M23 22 L34 22.6 L23 33 L12 22.6 Z" fill="var(--acc)"/>
+            </svg>
+          </div>
           <div class="spin-wheel" id="spinWheel" aria-hidden="true"></div>
           <button class="spin-hub" id="spinHub" type="button">
             <span class="spin-hub-t" data-i18n="spin.fab">Spin &amp; win</span>
@@ -1112,12 +1124,20 @@ const SPIN_OFFERS = [
          msg:'🔥 ICONFIT GYM — عرض 24 ساعة بس!\n\nلفّيت عجلة الحظ على موقع IconFit وكسبت العرض ده:\n\n👨 رجالي — اشتراك سنوي (تجديد)\n• 12 شهر + شهرين تجميد مجاناً\n• 10,800 جنيه كاش\n\n⚠️ 24 ساعة بس — بدون تمديد.\n📲 هبعت رسالة قبل ما أجي الجيم عشان أحجز العرض.\n\n📞 كلمني: 01274745161' }
   },
   {
-    en:{ seg:['LADIES','9,900'], who:'Ladies — starting from 16 years', tier:'New / Renew · Annual Membership',
+    en:{ seg:['LADIES · NEW','9,900'], who:'Ladies — starting from 16 years', tier:'New · Annual Membership',
          rows:['12 Months + 2 Months FREEZE','9,900 EGP CASH'], price:'9,900', unit:'EGP CASH',
-         msg:'🔥 ICONFIT GYM — 24 HOURS ONLY!\n\nI just spun the wheel on the IconFit website and won:\n\n👩 LADIES — Annual Membership (NEW / RENEW)\n• 12 Months + 2 Months FREEZE\n• 9,900 EGP CASH\n\n⚠️ 24 HOURS ONLY — NO EXTENSION.\n📲 I will message before coming to the gym to secure this offer.\n\n📞 Call me: 01274745161' },
-    ar:{ seg:['نسائي','9,900'], who:'نسائي — يبدأ من 16 سنة', tier:'جديد / تجديد · اشتراك سنوي',
+         msg:'🔥 ICONFIT GYM — 24 HOURS ONLY!\n\nI just spun the wheel on the IconFit website and won:\n\n👩 LADIES — Annual Membership (NEW)\n• 12 Months + 2 Months FREEZE\n• 9,900 EGP CASH\n\n⚠️ 24 HOURS ONLY — NO EXTENSION.\n📲 I will message before coming to the gym to secure this offer.\n\n📞 Call me: 01274745161' },
+    ar:{ seg:['نسائي · جديد','9,900'], who:'نسائي — يبدأ من 16 سنة', tier:'جديد · اشتراك سنوي',
          rows:['12 شهر + شهرين تجميد مجاناً','9,900 جنيه كاش'], price:'9,900', unit:'جنيه كاش',
-         msg:'🔥 ICONFIT GYM — عرض 24 ساعة بس!\n\nلفّيت عجلة الحظ على موقع IconFit وكسبت العرض ده:\n\n👩 نسائي — اشتراك سنوي (جديد / تجديد)\n• 12 شهر + شهرين تجميد مجاناً\n• 9,900 جنيه كاش\n\n⚠️ 24 ساعة بس — بدون تمديد.\n📲 هبعت رسالة قبل ما أجي الجيم عشان أحجز العرض.\n\n📞 كلمني: 01274745161' }
+         msg:'🔥 ICONFIT GYM — عرض 24 ساعة بس!\n\nلفّيت عجلة الحظ على موقع IconFit وكسبت العرض ده:\n\n👩 نسائي — اشتراك سنوي (جديد)\n• 12 شهر + شهرين تجميد مجاناً\n• 9,900 جنيه كاش\n\n⚠️ 24 ساعة بس — بدون تمديد.\n📲 هبعت رسالة قبل ما أجي الجيم عشان أحجز العرض.\n\n📞 كلمني: 01274745161' }
+  },
+  {
+    en:{ seg:['LADIES · RENEW','9,900'], who:'Ladies — starting from 16 years', tier:'Renew · Annual Membership',
+         rows:['12 Months + 2 Months FREEZE','9,900 EGP CASH'], price:'9,900', unit:'EGP CASH',
+         msg:'🔥 ICONFIT GYM — 24 HOURS ONLY!\n\nI just spun the wheel on the IconFit website and won:\n\n👩 LADIES — Annual Membership (RENEW)\n• 12 Months + 2 Months FREEZE\n• 9,900 EGP CASH\n\n⚠️ 24 HOURS ONLY — NO EXTENSION.\n📲 I will message before coming to the gym to secure this offer.\n\n📞 Call me: 01274745161' },
+    ar:{ seg:['نسائي · تجديد','9,900'], who:'نسائي — يبدأ من 16 سنة', tier:'تجديد · اشتراك سنوي',
+         rows:['12 شهر + شهرين تجميد مجاناً','9,900 جنيه كاش'], price:'9,900', unit:'جنيه كاش',
+         msg:'🔥 ICONFIT GYM — عرض 24 ساعة بس!\n\nلفّيت عجلة الحظ على موقع IconFit وكسبت العرض ده:\n\n👩 نسائي — اشتراك سنوي (تجديد)\n• 12 شهر + شهرين تجميد مجاناً\n• 9,900 جنيه كاش\n\n⚠️ 24 ساعة بس — بدون تمديد.\n📲 هبعت رسالة قبل ما أجي الجيم عشان أحجز العرض.\n\n📞 كلمني: 01274745161' }
   }
 ];
 const SEG_DEG = 360 / SPIN_OFFERS.length;
@@ -1487,17 +1507,28 @@ function pickIndex(){
 }
 
 function renderWheel(){
-  const R = 96, C = 100;
+  const R = 96, C = 100, N = SPIN_OFFERS.length;
   const pt = a => {
     const r = a * Math.PI / 180;
     return (C + R * Math.sin(r)).toFixed(2) + ',' + (C - R * Math.cos(r)).toFixed(2);
   };
   let s = '<svg viewBox="0 0 200 200" aria-hidden="true">';
-  for (let i = 0; i < SPIN_OFFERS.length; i++){
+  for (let i = 0; i < N; i++){
     s += '<path class="w' + i + '" d="M' + C + ',' + C + ' L' + pt(i * SEG_DEG) +
-         ' A' + R + ',' + R + ' 0 0,1 ' + pt((i + 1) * SEG_DEG) + ' Z" stroke-width="1.2"/>';
+         ' A' + R + ',' + R + ' 0 0,1 ' + pt((i + 1) * SEG_DEG) + ' Z" stroke-width="1.4"/>';
   }
-  put('spinWheel', s + '</svg>');
+  /* rim ring + decorative peg band */
+  s += '<circle class="wr" cx="' + C + '" cy="' + C + '" r="' + (R + 1) + '"/>' +
+       '<circle class="wb" cx="' + C + '" cy="' + C + '" r="86"/>' +
+       '<circle class="wb" cx="' + C + '" cy="' + C + '" r="62"/>';
+  for (let k = 0; k < 16; k++){
+    const a = k * 22.5 * Math.PI / 180;
+    const x = (C + 74 * Math.sin(a)).toFixed(2);
+    const y = (C - 74 * Math.cos(a)).toFixed(2);
+    s += '<circle class="wp' + (k % 2) + '" cx="' + x + '" cy="' + y + '" r="1.9"/>';
+  }
+  s += '</svg>';
+  put('spinWheel', s);
 }
 
 function renderSpinResult(){
